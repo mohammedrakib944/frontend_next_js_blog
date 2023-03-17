@@ -86,7 +86,7 @@ const SinglePost = () => {
           </div>
 
           {/* Google adds section */}
-          <div className="w-[468px] h-[160px] mt-10 bg-gray-900/50"></div>
+          <div className="w-[468px] h-[160px] mt-10 bg-transparent"></div>
 
           {/* Go to posts */}
           <p className="mt-24 pb-4 text-lg text-secondary">THE END!</p>
@@ -99,7 +99,7 @@ const SinglePost = () => {
 
         {/* Google adds section */}
         <div className="hidden md:block pt-20">
-          <div className="sticky top-4 w-[160px] h-[600px] bg-gray-900/50"></div>
+          <div className="sticky top-4 w-[160px] h-[600px] bg-transparent"></div>
         </div>
       </div>
     </>
