@@ -3,12 +3,20 @@ import axiosBase from "../utils/axiosSetup";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import useAuth from "@/utils/useAuth";
 
 const Login = () => {
   // const { posts } = useContext(blogContext);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const isAuth = useAuth();
   const router = useRouter();
+
+  (async () => {
+    if (await isAuth) {
+      router.push("/dashboard");
+    }
+  })();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -22,7 +30,7 @@ const Login = () => {
         },
         withCredentials: true,
       });
-      router.push("/dashboard");
+      window.location.reload();
     } catch (err) {
       let errMessage = err.response?.data?.message || "There is an error!";
       console.log("Error: ", errMessage);

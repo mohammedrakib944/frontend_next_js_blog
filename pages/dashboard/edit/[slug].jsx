@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import MarkdownIt from "markdown-it";
 import Link from "next/link";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import { useState, useContext, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axiosBase from "@/utils/axiosSetup";
 import { useRouter } from "next/router";
 

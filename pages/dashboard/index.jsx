@@ -58,7 +58,7 @@ const dashboard = () => {
         method: "POST",
         withCredentials: true,
       });
-      router.push("/admin");
+      window.location.reload();
     } catch (err) {
       const errMess = err?.response?.data.message || "Cann't Logout!";
       toast.error(errMess);
