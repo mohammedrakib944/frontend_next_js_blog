@@ -19,7 +19,6 @@ const index = () => {
         url: "/post",
         method: "GET",
       });
-      console.log("Result: ", result);
       setPosts(result?.data?.data);
       setArticles(result?.data?.data);
       setIsLoading(false);
