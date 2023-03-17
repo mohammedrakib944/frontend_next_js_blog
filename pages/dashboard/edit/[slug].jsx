@@ -9,9 +9,7 @@ import { useState, useContext, useEffect } from "react";
 import axiosBase from "@/utils/axiosSetup";
 import { useRouter } from "next/router";
 
-const MdEditor = dynamic(() => import("react-markdown-editor-lite"), {
-  ssr: false,
-});
+const MdEditor = dynamic(() => import("react-markdown-editor-lite"));
 
 const markdownItOptions = {
   html: true,
