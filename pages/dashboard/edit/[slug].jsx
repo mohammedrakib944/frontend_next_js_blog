@@ -1,3 +1,5 @@
+/**
+
 import dynamic from "next/dynamic";
 import "react-markdown-editor-lite/lib/index.css";
 import { ToastContainer, toast } from "react-toastify";
@@ -174,6 +176,16 @@ const Edit = () => {
       </form>
     </div>
   );
+};
+
+export default Edit;
+
+ */
+
+import React from "react";
+
+const Edit = () => {
+  return <div>Hi Edit</div>;
 };
 
 export default Edit;
