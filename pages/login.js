@@ -5,6 +5,9 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useAuth from "@/utils/useAuth";
 
+// rakib@w
+// pass@&1
+
 const Login = () => {
   // const { posts } = useContext(blogContext);
   const [username, setUsername] = useState("");
@@ -28,9 +31,12 @@ const Login = () => {
           username,
           password,
         },
-        withCredentials: true,
       });
-      window.location.reload();
+      const { access_token } = res.data?.data;
+      if (access_token) {
+        localStorage.setItem("token", access_token);
+        window.location.reload();
+      }
     } catch (err) {
       let errMessage = err.response?.data?.message || "There is an error!";
       console.log("Error: ", errMessage);

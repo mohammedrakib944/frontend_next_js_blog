@@ -68,11 +68,19 @@ const Edit = () => {
     e.preventDefault();
     setIsLoading(true);
 
+    // Get token from localstorage
+    const token = localStorage.getItem("token");
+    if (!token) {
+      toast.error("You are not valid user!");
+      return;
+    }
+
     const sendingData = {
       title,
       short_ans: shortAns,
       description: markdownText,
       category,
+      token,
     };
 
     if (!postID) {

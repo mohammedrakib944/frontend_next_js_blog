@@ -39,6 +39,7 @@ const Create = () => {
   // CREATE POST
   const handleCreatePost = async (e) => {
     e.preventDefault();
+    const token = localStorage.getItem("token");
     setIsLoading(true);
     const sendingData = {
       title,
@@ -46,7 +47,10 @@ const Create = () => {
       description: markdownText,
       category,
       image,
+      token,
     };
+
+    console.log("Sending Data: ", sendingData);
 
     //Sending to backend
     try {
@@ -58,8 +62,9 @@ const Create = () => {
           accept: "application/json",
           "Content-Type": `multipart/form-data;`,
         },
-        withCredentials: true,
       });
+
+      console.log("Res: ", result.data);
 
       setPosts((prev) => [...prev, result?.data?.data]);
       toast.success("Post added!");

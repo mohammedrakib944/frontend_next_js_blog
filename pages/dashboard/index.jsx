@@ -7,11 +7,9 @@ import axiosBase from "@/utils/axiosSetup";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Moment from "react-moment";
-import { useRouter } from "next/router";
 
 const dashboard = () => {
   let { posts, setPosts } = useContext(blogContext);
-  const router = useRouter();
 
   // GET POSTs
   const fetchPosts = async () => {
@@ -33,12 +31,19 @@ const dashboard = () => {
 
   // DELTE POST
   const handleDelete = async (id) => {
+    // check Token
+    const token = localStorage.getItem("token");
+    if (!token) {
+      toast.error("You are not valid user!");
+      return;
+    }
+
     if (confirm("It will detele Permanently?")) {
       try {
         await axiosBase({
           url: `/post/${id}`,
           method: "DELETE",
-          withCredentials: true,
+          data: { token },
         });
         toast.info("Delete Success!");
         fetchPosts();
@@ -52,17 +57,8 @@ const dashboard = () => {
   // LOGOUT
   const handleLogOut = async () => {
     if (!confirm("You want to Logout?")) return;
-    try {
-      await axiosBase({
-        url: `/auth/logout`,
-        method: "POST",
-        withCredentials: true,
-      });
-      window.location.reload();
-    } catch (err) {
-      const errMess = err?.response?.data.message || "Cann't Logout!";
-      toast.error(errMess);
-    }
+    localStorage.clear("token");
+    window.location.reload();
   };
 
   return (
