@@ -3,8 +3,9 @@ import Moment from "react-moment";
 
 const CardVertical = ({ post }) => {
   const coverImage =
-    post?.image ||
+    `https://api.rakibwrites.com/uploads/${post.img_name}` ||
     "https://unper.ac.id/wp-content/plugins/tutor/assets/images/placeholder-.jpg";
+
   return (
     <div className="card w-[340px] bg-base-100 hover:shadow-xl duration-200 border border-gray-400/20">
       <figure>
@@ -26,9 +27,7 @@ const CardVertical = ({ post }) => {
             {post?.title?.substring(0, 50)}...
           </h2>
         </Link>
-        <p className="text-neutral-content">
-          {post?.short_ans?.substring(0, 70)}...
-        </p>
+        <p className="text-gray-900">{post?.short_ans?.substring(0, 70)}...</p>
         <Link href={`/blog/${post?.slug}`}>
           <button className="btn btn-success hover:bg-green-400 px-6 mt-2 btn-sm rounded-full">
             Read More

@@ -47,34 +47,39 @@ const SinglePost = () => {
         <meta name="robots" content="all" />
       </Head>
 
-      <div className="px-20 py-3 text-gray-500 text-sm">
-        Article by |
-        <Link href="/" className="font-semibold text-success">
-          {" "}
-          Mohammed Rakib
-        </Link>
+      <div className="px-6 py-3 text-gray-500 text-sm bg-white border-b sticky top-0">
+        <div className="flex justify-between gap-6">
+          <Link
+            className="flex gap-3 items-center text-secondary font-bold"
+            href="/blog"
+          >
+            <IoMdArrowRoundBack /> All Articles
+          </Link>
+          <div>
+            <span>Article by | </span>
+            <Link href="/" className="font-semibold text-secondary">
+              Mohammad Rakib
+            </Link>
+          </div>
+        </div>
       </div>
-      <div className="flex gap-6">
+      <div className="flex lg:gap-6">
         <ToastContainer theme="colored" />
-        <div className=" px-6 bg-[#2d303d] lg:max-w-[800px] lg:pb-6 lg:px-20 rounded-xl mx-auto">
+        <div className="px-6 w-full lg:max-w-[700px] lg:pb-6 rounded-xl mx-auto">
           {/* Ttile */}
-          <h2 className="text-3xl mt-6 mb-1">{singlePost?.title}</h2>
+          <h2 className="text-3xl font-bold mt-6 mb-1">{singlePost?.title}</h2>
           {/* Time */}
-          <p className="text-neutral-content my-1">
+          <p className="text-neutral-content my-3">
             <span className="pb-0 text-sm text-gray-500">
               <Moment format="D MMM YYYY" withTitle>
                 {singlePost?.date}
               </Moment>
             </span>
           </p>
-          {/* Categroy */}
-          <p className="text-gray-500 mb-3 font-semibold">
-            #{singlePost?.category}
-          </p>
           {/* Poster */}
           <img
             className="w-full rounded-md"
-            src={singlePost?.image}
+            src={`https://api.rakibwrites.com/uploads/${singlePost?.img_name}`}
             alt="Rakib | blog"
           />
 
@@ -86,7 +91,7 @@ const SinglePost = () => {
           </div>
 
           {/* Google adds section */}
-          <div className="w-[468px] h-[160px] mt-10 bg-transparent"></div>
+          <div className="w-full lg:w-[468px] h-[160px] mt-10 bg-base-200"></div>
 
           {/* Go to posts */}
           <p className="mt-24 pb-4 text-lg text-secondary">THE END!</p>
@@ -95,11 +100,6 @@ const SinglePost = () => {
               <IoMdArrowRoundBack /> All Articles
             </Link>
           </div>
-        </div>
-
-        {/* Google adds section */}
-        <div className="hidden md:block pt-20">
-          <div className="sticky top-4 w-[160px] h-[600px] bg-transparent"></div>
         </div>
       </div>
     </>

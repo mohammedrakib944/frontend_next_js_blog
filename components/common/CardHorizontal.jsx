@@ -3,13 +3,13 @@ import Moment from "react-moment";
 
 const CardHorizontal = ({ post }) => {
   const coverImage =
-    post?.image ||
+    `https://api.rakibwrites.com/uploads/${post.img_name}` ||
     "https://unper.ac.id/wp-content/plugins/tutor/assets/images/placeholder-.jpg";
   return (
-    <div className="card card-side bg-base-100 mb-6 border-b md:border-none border-gray-300/20 rounded-none pb-6 md:pb-0 px-2">
+    <div className="card card-side bg-base-100 mb-6 border-b md:border-none border-gray-300/20 rounded-none pb-6 md:pb-0">
       <figure>
         <img
-          className="hidden md:block max-h-[200px] md:w-[400px] rounded-lg"
+          className="hidden border md:block max-h-[200px] md:w-[400px] rounded-lg"
           src={coverImage}
           alt="Rakib"
         />
@@ -21,9 +21,7 @@ const CardHorizontal = ({ post }) => {
             {post?.title?.substring(0, 50)}...
           </h2>
         </Link>
-        <p className="text-neutral-content">
-          {post?.short_ans?.substring(0, 150)}...
-        </p>
+        <p className="text-gray-900">{post?.short_ans?.substring(0, 150)}...</p>
         <Link href={`/blog/${post?.slug}`}>
           <button className="btn btn-success hover:bg-green-400 px-6 btn-sm rounded-full">
             Read More

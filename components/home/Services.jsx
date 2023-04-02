@@ -32,7 +32,7 @@ const Services = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="card min-w-[160px] max-w-[350px] bg-base-100 shadow-xl border-gray-500/20 hover:text-success hover:shadow-none duration-200 border"
+            className="card min-w-[160px] text-center max-w-[350px] bg-base-100 shadow-xl border-gray-500/20 hover:text-success hover:shadow-none duration-200 border"
           >
             <div className="card-body flex gap-3 flex-col justify-center items-center">
               <div className="text-4xl py-3 text-success">{service.icon}</div>

@@ -7,13 +7,13 @@ import Typewriter from "typewriter-effect";
 const Hero = () => {
   return (
     <div className="hero mt-8 min-h-[480px] 0 rounded-xl">
-      <div className="hero-content flex-col lg:flex-row">
+      <div className="hero-content flex-col gap-10 lg:flex-row">
         <Image
           src={profilePic}
           alt="rakib"
           priority={true}
           width=""
-          className="mask mask-squircle w-[290px] lg:-rotate-6 hover:rotate-0 hover:scale-110 duration-200"
+          className="mask mask-squircle w-[290px] hover:-rotate-6 hover:scale-110 duration-200"
         />
         <div className="lg:ml-6">
           <h2 className="text-3xl">Hi!</h2>
@@ -27,7 +27,7 @@ const Hero = () => {
               }}
             />
           </h1>
-          <p className="py-5 text-gray-400">
+          <p className="py-5 text-gray-600">
             I am a Fullstack Web Developer. Also I have great knowledge about{" "}
             <b>Cyber Security</b> <br /> and Compitive Programming
           </p>

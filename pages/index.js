@@ -21,8 +21,8 @@ export default function Home() {
           <Hero />
           <div className="pt-2 pb-4 flex flex-col justify-center items-center">
             <Link href="/blog">
-              <button className="w-[300px] btn btn-secondary rounded-full font-bold">
-                Read My blog
+              <button className="w-[300px] btn btn-secondary rounded-full font-bold hover:scale-105 duration-75">
+                My Blog
               </button>
             </Link>
           </div>

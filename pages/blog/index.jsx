@@ -58,7 +58,7 @@ const index = () => {
       ) : (
         <div className="lg:px-6">
           <ToastContainer theme="colored" />
-          <div className="mt-6 flex gap-3 mb-6 flex-wrap">
+          <div className="px-6 md:px-0 mt-6 flex gap-3 mb-6 flex-wrap">
             <button
               className={`btn btn-sm rounded-full ${
                 cat === "" && "btn-success"
@@ -100,6 +100,9 @@ const index = () => {
               Lifestyle
             </button>
           </div>
+          <h1 className="border-l-2 pl-2 border-success text-xl font-bold mt-6 ml-6 md:ml-0 mb-4 text-secondary">
+            RECENT
+          </h1>
           <div className="grid md:grid-cols-2 place-items-center md:place-items-stretch  lg:grid-cols-3 gap-3">
             {articles.length > 0 &&
               articles.map(
@@ -108,11 +111,11 @@ const index = () => {
               )}
           </div>
           {articles.length > 3 && (
-            <h1 className="text-xl font-bold mt-10 ml-6 md:ml-0 mb-3 text-secondary">
+            <h1 className="border-l-2 pl-2 border-success text-xl font-bold mt-10 ml-6 md:ml-0 mb-3 text-secondary">
               ALL ARTICLES
             </h1>
           )}
-          <div className="grid md:place-items-stretch md:gap-2">
+          <div className="grid md:place-items-stretch px-6 md:px-0 md:gap-2">
             {articles.length > 0 &&
               articles.map(
                 (post, index) =>
