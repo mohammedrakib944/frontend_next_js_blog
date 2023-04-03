@@ -59,7 +59,7 @@ const SinglePost = () => {
             <IoMdArrowRoundBack /> All Articles
           </Link>
           <div className="flex items-center gap-2">
-            <span>Article by | </span>
+            <span>Written by | </span>
             <Link
               href="/"
               className="font-semibold text-secondary flex items-center gap-2 hover:text-success"
