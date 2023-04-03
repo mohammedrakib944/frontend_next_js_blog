@@ -50,8 +50,6 @@ const Create = () => {
       token,
     };
 
-    console.log("Sending Data: ", sendingData);
-
     //Sending to backend
     try {
       const result = await axiosBase({

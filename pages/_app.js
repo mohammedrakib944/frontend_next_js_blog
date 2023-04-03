@@ -20,11 +20,13 @@ export default function App({ Component, pageProps }) {
   checkAuth();
 
   return (
-    <ContextProdiver>
-      <NextNProgress color="#14bf09" />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ContextProdiver>
+    <>
+      <ContextProdiver>
+        <NextNProgress color="#14bf09" />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ContextProdiver>
+    </>
   );
 }

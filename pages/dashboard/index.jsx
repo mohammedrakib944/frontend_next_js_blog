@@ -73,7 +73,6 @@ const dashboard = () => {
         <div className="stat place-items-center">
           <div className="stat-title">Total Articles</div>
           <div className="stat-value">{posts?.length}</div>
-          <div className="stat-desc mt-1">By Md.Rakib</div>
         </div>
         <div className="stat place-items-center">
           <Link href="/dashboard/create">

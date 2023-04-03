@@ -5,6 +5,7 @@ import blogContext from "@/context/context";
 import axiosBase from "@/utils/axiosSetup";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Head from "next/head";
 
 const index = () => {
   const { posts, setPosts } = useContext(blogContext);
@@ -51,6 +52,9 @@ const index = () => {
 
   return (
     <>
+      <Head>
+        <link rel="icon" href="/img/favicon.ico" />
+      </Head>
       {isLoading ? (
         <div className="w-full min-h-screen pt-32 text-center">
           <progress className="progress progress-info w-56"></progress>
@@ -111,7 +115,7 @@ const index = () => {
               )}
           </div>
           {articles.length > 3 && (
-            <h1 className="border-l-2 pl-2 border-success text-xl font-bold mt-10 ml-6 md:ml-0 mb-3 text-secondary">
+            <h1 className="border-l-2 pl-2 border-success text-xl font-bold mt-10 ml-6 md:ml-0 mb-6 md:mb-4 text-secondary">
               ALL ARTICLES
             </h1>
           )}

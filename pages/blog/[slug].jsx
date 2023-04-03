@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import axiosBase from "@/utils/axiosSetup";
 import { useRouter } from "next/router";
@@ -8,6 +9,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Moment from "react-moment";
 import ReactMarkdown from "react-markdown";
+import RakibImg from "../../public/img/rakib2.jpg";
 
 const SinglePost = () => {
   const [singlePost, setSinglePost] = useState({});
@@ -45,9 +47,10 @@ const SinglePost = () => {
           key={singlePost?.category}
         />
         <meta name="robots" content="all" />
+        <link rel="icon" href="/img/favicon.ico" />
       </Head>
 
-      <div className="px-6 py-3 text-gray-500 text-sm bg-white border-b sticky top-0">
+      <div className="px-6 py-2 text-gray-500 text-sm bg-white border-b z-20 sticky top-0">
         <div className="flex justify-between gap-6">
           <Link
             className="flex gap-3 items-center text-secondary font-bold"
@@ -55,9 +58,18 @@ const SinglePost = () => {
           >
             <IoMdArrowRoundBack /> All Articles
           </Link>
-          <div>
+          <div className="flex items-center gap-2">
             <span>Article by | </span>
-            <Link href="/" className="font-semibold text-secondary">
+            <Link
+              href="/"
+              className="font-semibold text-secondary flex items-center gap-2 hover:text-success"
+            >
+              <Image
+                className="rounded-full border"
+                width="33"
+                src={RakibImg}
+                alt="Rakib"
+              />{" "}
               Mohammad Rakib
             </Link>
           </div>
@@ -77,11 +89,13 @@ const SinglePost = () => {
             </span>
           </p>
           {/* Poster */}
-          <img
-            className="w-full rounded-md"
-            src={`https://api.rakibwrites.com/uploads/${singlePost?.img_name}`}
-            alt="Rakib | blog"
-          />
+          {singlePost?.img_name && (
+            <img
+              className="w-full rounded-md border"
+              src={`https://api.rakibwrites.com/uploads/${singlePost?.img_name}`}
+              alt="Rakib | blog"
+            />
+          )}
 
           {/* Description */}
           <div className="lg:text-lg pt-6">
@@ -91,15 +105,20 @@ const SinglePost = () => {
           </div>
 
           {/* Google adds section */}
-          <div className="w-full lg:w-[468px] h-[160px] mt-10 bg-base-200"></div>
+          <div className="w-full lg:w-[468px] rounded-md h-[160px] mt-10 bg-base-200"></div>
 
           {/* Go to posts */}
-          <p className="mt-24 pb-4 text-lg text-secondary">THE END!</p>
-          <div className=" mb-10 pt-6 border-t border-secondary">
-            <Link className="flex gap-3 items-center text-success" href="/blog">
+          <p className="mt-10 py-4 text-lg text-secondary font-bold border-b border-t border-secondary text-center border-dashed">
+            THE END!
+          </p>
+          {/* <div className=" mb-10 pt-6 border-t border-secondary">
+            <Link
+              className="flex gap-3 items-center text-secondary font-bold"
+              href="/blog"
+            >
               <IoMdArrowRoundBack /> All Articles
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
