@@ -31,7 +31,7 @@ const CardHorizontal = ({ post }) => {
         <p className="text-gray-900">{post?.short_ans?.substring(0, 150)}...</p>
 
         {/* ID */}
-        <p className="text-sm text-gray-500 badge bg-gray-200 border-none">
+        <p className="text-sm text-gray-500 badge bg-gray-100 rounded-md border-none">
           {post?.id}
         </p>
       </div>

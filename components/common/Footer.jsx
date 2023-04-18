@@ -39,7 +39,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="flex flex-wrap gap-4">
+        {/* <div className="flex flex-wrap gap-4">
           <Link href="/blog" className="link link-hover">
             My Blog
           </Link>
@@ -55,7 +55,7 @@ const Footer = () => {
           <Link href="/privary" className="link link-hover">
             Privary Policy
           </Link>
-        </div>
+        </div> */}
         <div>
           <p>Copyright (c) 2023 mohammedrakib944</p>
         </div>

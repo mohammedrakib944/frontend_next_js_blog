@@ -22,7 +22,7 @@ export default function Home() {
           <div className="pt-2 pb-4 flex flex-col justify-center items-center">
             <Link href="/blog">
               <button className="w-[300px] btn btn-secondary rounded-full font-bold hover:scale-105 duration-75">
-                My Blog
+                Read My Articles
               </button>
             </Link>
           </div>

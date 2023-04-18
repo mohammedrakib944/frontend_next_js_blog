@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Head from "next/head";
-import Image from "next/image";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import axiosBase from "@/utils/axiosSetup";
 import { useRouter } from "next/router";
@@ -9,24 +8,28 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Moment from "react-moment";
 import ReactMarkdown from "react-markdown";
-import RakibImg from "../../public/img/rakib2.jpg";
+import Loader from "@/components/common/Loader";
 
 const SinglePost = () => {
   const [singlePost, setSinglePost] = useState({});
   const router = useRouter();
   const { slug } = router.query;
+  const [isLoading, setIsLoading] = useState(false);
 
   const fetchPost = async (slug) => {
     try {
+      setIsLoading(true);
       const result = await axiosBase({
         url: `/post/${slug}`,
         method: "GET",
       });
       setSinglePost(result?.data?.data);
+      setIsLoading(false);
     } catch (err) {
       console.log("Here is error: ", err);
       const errMess = err?.response?.data || "Server error!";
       toast.error(errMess);
+      setIsLoading(false);
     }
   };
 
@@ -64,10 +67,10 @@ const SinglePost = () => {
               href="/"
               className="font-semibold text-secondary flex items-center gap-2 hover:text-success"
             >
-              <Image
+              <img
                 className="rounded-full border"
                 width="33"
-                src={RakibImg}
+                src="/img/rakib2.jpg"
                 alt="Rakib"
               />{" "}
               Mohammad Rakib
@@ -77,41 +80,46 @@ const SinglePost = () => {
       </div>
       <div className="flex lg:gap-6">
         <ToastContainer theme="colored" />
-        <div className="px-6 w-full lg:max-w-[700px] lg:pb-6 rounded-xl mx-auto">
-          {/* Ttile */}
-          <h2 className="text-3xl font-bold mt-6 mb-1">{singlePost?.title}</h2>
-          {/* Time */}
-          <p className="text-neutral-content my-3">
-            <span className="pb-0 text-sm text-gray-500">
-              <Moment format="D MMM YYYY" withTitle>
-                {singlePost?.date}
-              </Moment>
-            </span>
-          </p>
-          {/* Poster */}
-          {singlePost?.img_name && (
-            <img
-              className="w-full rounded-md border"
-              src={`https://api.rakibwrites.com/uploads/${singlePost?.img_name}`}
-              alt="Rakib | blog"
-            />
-          )}
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <div className="px-6 w-full lg:max-w-[700px] lg:pb-6 rounded-xl mx-auto">
+            {/* Ttile */}
+            <h2 className="text-3xl font-bold mt-6 mb-1">
+              {singlePost?.title}
+            </h2>
+            {/* Time */}
+            <p className="text-neutral-content my-3">
+              <span className="pb-0 text-sm text-gray-500">
+                <Moment format="D MMM YYYY" withTitle>
+                  {singlePost?.date}
+                </Moment>
+              </span>
+            </p>
+            {/* Poster */}
+            {singlePost?.img_name && (
+              <img
+                className="w-full rounded-md border"
+                src={`https://api.rakibwrites.com/uploads/${singlePost?.img_name}`}
+                alt="Rakib | blog"
+              />
+            )}
 
-          {/* Description */}
-          <div className="lg:text-lg pt-6">
-            <div className="prose lg:text-lg">
-              <ReactMarkdown>{singlePost?.description}</ReactMarkdown>
+            {/* Description */}
+            <div className="lg:text-lg pt-6">
+              <div className="prose lg:text-lg">
+                <ReactMarkdown>{singlePost?.description}</ReactMarkdown>
+              </div>
             </div>
-          </div>
 
-          {/* Google adds section */}
-          <div className="w-full lg:w-[468px] rounded-md h-[160px] mt-10 bg-base-200"></div>
+            {/* Google adds section */}
+            <div className="w-full lg:w-[468px] rounded-md h-[160px] mt-10 bg-base-200"></div>
 
-          {/* Go to posts */}
-          <p className="mt-10 py-4 text-lg text-secondary font-bold border-b border-t border-secondary text-center border-dashed">
-            THE END!
-          </p>
-          {/* <div className=" mb-10 pt-6 border-t border-secondary">
+            {/* Go to posts */}
+            <p className="mt-10 py-4 text-lg text-secondary font-bold border-b border-t border-secondary text-center border-dashed">
+              THE END!
+            </p>
+            {/* <div className=" mb-10 pt-6 border-t border-secondary">
             <Link
               className="flex gap-3 items-center text-secondary font-bold"
               href="/blog"
@@ -119,7 +127,8 @@ const SinglePost = () => {
               <IoMdArrowRoundBack /> All Articles
             </Link>
           </div> */}
-        </div>
+          </div>
+        )}
       </div>
     </>
   );

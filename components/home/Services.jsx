@@ -17,7 +17,7 @@ const services = [
     icon: <AiOutlineBug />,
   },
   {
-    title: "Cyber Support",
+    title: "Web security",
     icon: <TbWorldWww />,
   },
 ];

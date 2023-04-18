@@ -1,4 +1,3 @@
-import Image from "next/image";
 import One from "../../public/achive/1.jpg";
 import Two from "../../public/achive/2.jpg";
 import Three from "../../public/achive/3.jpeg";
@@ -32,8 +31,8 @@ const Achivement = () => {
 
       <div className="flex flex-wrap gap-4 mt-4">
         {achive.map((data, index) => (
-          <Image
-            src={data.img}
+          <img
+            src={data.img.src}
             priority
             key={index}
             className="rounded-lg max-w-full lg:max-w-[400px]"

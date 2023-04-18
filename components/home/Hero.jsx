@@ -1,15 +1,13 @@
-import Image from "next/image";
 import { BsGithub } from "react-icons/bs";
-import profilePic from "../../public/img/rakib.jpg";
 import Typewriter from "typewriter-effect";
-// import BG from "./bg.svg";
+import RakibImg from "../../public/img/rakib.jpg";
 
 const Hero = () => {
   return (
     <div className="hero mt-8 min-h-[480px] 0 rounded-xl">
       <div className="hero-content flex-col gap-10 lg:flex-row">
-        <Image
-          src={profilePic}
+        <img
+          src={RakibImg.src}
           alt="rakib"
           priority={true}
           width=""
@@ -27,9 +25,8 @@ const Hero = () => {
               }}
             />
           </h1>
-          <p className="py-5 text-gray-600">
-            I am a Fullstack Web Developer. Also I have great knowledge about{" "}
-            <b>Cyber Security</b> <br /> and Compitive Programming
+          <p className="py-5 text-gray-600 font-semibold">
+            I am a Fullstack Web Developer & Competitive Programmer
           </p>
 
           <a
