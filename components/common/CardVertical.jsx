@@ -11,13 +11,13 @@ const CardVertical = ({ post }) => {
       <Link href={`/blog/${post?.slug}`}>
         <figure>
           <img
-            className="w-full h-[200px]  object-cover"
+            className="w-full h-[200px]  object-cover hover:scale-110 duration-200"
             src={coverImage}
             alt="Rakib"
           />
         </figure>
       </Link>
-      <div className="card-body">
+      <div className="py-3 md:py-0 md:p-3 lg:p-4">
         <div className="flex justify-between items-center text-gray-400">
           <span>
             <Moment fromNow>{post?.date}</Moment>

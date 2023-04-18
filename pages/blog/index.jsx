@@ -118,11 +118,11 @@ const index = () => {
               ALL ARTICLES
             </h1>
           )}
-          <div className="grid md:place-items-stretch px-6 md:px-0 md:gap-2">
+          <div className="grid md:grid-cols-2 place-items-center md:place-items-stretch  lg:grid-cols-3 gap-3">
             {articles.length > 0 &&
               articles.map(
                 (post, index) =>
-                  index > 2 && <CardHorizontal key={index} post={post} />
+                  index > 2 && <CardVertical key={index} post={post} />
               )}
           </div>
         </div>
