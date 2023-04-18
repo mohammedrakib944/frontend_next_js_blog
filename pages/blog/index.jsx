@@ -1,4 +1,3 @@
-import CardHorizontal from "@/components/common/CardHorizontal";
 import CardVertical from "@/components/common/CardVertical";
 import { useContext, useEffect, useState } from "react";
 import blogContext from "@/context/context";
@@ -7,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Head from "next/head";
 import Loader from "@/components/common/Loader";
+import CardLoadingSkeleton from "@/components/common/CardLoadingSkeleton";
 
 const index = () => {
   const { posts, setPosts } = useContext(blogContext);
@@ -57,7 +57,21 @@ const index = () => {
         <link rel="icon" href="/img/favicon.ico" />
       </Head>
       {isLoading ? (
-        <Loader />
+        <div>
+          <div class="animate-pulse flex flex-wrap gap-3 my-5 ml-3">
+            <div class="h-10 w-[180px] bg-gray-700 rounded-full mb-4"></div>
+            <div class="h-10 w-[180px] bg-gray-700 rounded-full mb-4"></div>
+            <div class="h-10 w-[180px] bg-gray-700 rounded-full mb-4"></div>
+          </div>
+          <div className="grid md:grid-cols-2 place-items-center md:place-items-stretch  lg:grid-cols-3 gap-3">
+            <CardLoadingSkeleton />
+            <CardLoadingSkeleton />
+            <CardLoadingSkeleton />
+            <CardLoadingSkeleton />
+            <CardLoadingSkeleton />
+            <CardLoadingSkeleton />
+          </div>
+        </div>
       ) : (
         <div className="lg:px-6">
           <ToastContainer theme="colored" />
