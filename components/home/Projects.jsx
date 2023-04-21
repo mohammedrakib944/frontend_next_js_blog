@@ -4,15 +4,10 @@ import ecommerce from "../assets/projects/ecommerce.png";
 import instaLong from "../assets/projects/instaLong.png";
 import nftMarket from "../assets/projects/NFT.png";
 import movie from "../assets/projects/movie.png";
+import movies from "../assets/projects/movies.png";
 import Link from "next/link";
 
 const projectsData = [
-  {
-    title: "Crypto Swap",
-    img: nftMarket,
-    tech: "NEXT.JS CSS 3 Ether.js",
-    url: "https://rakib38-swap.netlify.app",
-  },
   {
     title: "Dorac (NFT Marketplace)",
     img: DoracM,
@@ -43,6 +38,12 @@ const projectsData = [
     tech: "React js CSS 3 Tailwind CSS",
     url: "https://rakib-nft-marketplace.netlify.app/",
   },
+  {
+    title: "Crypto Swap",
+    img: nftMarket,
+    tech: "NEXT.JS CSS 3 Ether.js",
+    url: "https://rakib38-swap.netlify.app",
+  },
 ];
 
 const Projects = () => {
@@ -56,9 +57,25 @@ const Projects = () => {
           Explore <span className="font-bold">this website</span>. This is one
           of my full-stack project (Next.js, Tailwind CSS, Express.js, MySql).
         </h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 my-10">
+        <div className="grid lg:grid-rows-3 md:grid-cols-2 lg:grid-cols-8 gap-4 my-10">
+          <div className="lg:col-span-4 lg:row-span-2 card rounded-sm group bg-base-100">
+            <Link href={"https://rakib-moviex.netlify.app/"} target="_blank">
+              <img
+                className="group-hover:scale-105 duration-200 rounded-md"
+                alt="React js - Movie Details"
+                src={movies.src}
+              />
+            </Link>
+
+            <div className="card-body">
+              <p className="font-semibold text-center">React js - Movie View</p>
+            </div>
+          </div>
           {projectsData.map((project, index) => (
-            <div key={index} className="card rounded-sm group bg-base-100">
+            <div
+              key={index}
+              className="card lg:col-span-2 rounded-sm group bg-base-100"
+            >
               <Link href={project.url} target="_blank">
                 <img
                   className="h-[200px] w-[340px] object-cover group-hover:scale-105 duration-200 rounded-md"

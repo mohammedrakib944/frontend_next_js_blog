@@ -5,4 +5,5 @@
 .setBG {
   background: url("../public/img/bg.svg") center;
   background-size: contain;
+  background-position-y: 0px;
 }

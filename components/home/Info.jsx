@@ -6,22 +6,41 @@ const Info = () => {
       <h1 className="text-2xl font-bold mb-4 border-l-2 border-primary pl-3">
         ABOUT ME
       </h1>
-      <p className="text-lg">
-        My Name is Md.Rakibuzzaman (Rakib). I am an undergraduate computer
-        science student. I have been doing programming since 2017. On early
-        stage I learned HTML, CSS, and javascript. (Javscript ! is my favorite
-        Language) I started doing competitive programming from 2019 along with
-        learn Data Structure and Algorithms. And Solved many problems on
-        different websites like codechef.com, codeforces.com, hackerrank.com,
-        etc. Besides, attend Programming contests.
+      <br />
+      <div className="text-lg">
+        <p>
+          My Name is Md.Rakibuzzaman (Rakib). I am an undergraduate computer
+          science student.
+        </p>
         <br />
+        <p>
+          And am a skilled Full Stack Web Developer with expertise in a range of
+          technologies including React JS, Next JS, Node JS, Express JS,
+          MongoDB, HTML, CSS, and Tailwind CSS. I has a passion for developing
+          high-quality, efficient, and user-friendly web applications.
+        </p>
         <br />
-        In 2020 I move to full stack web development and Learn React js, Next
-        js, Tailwind, Node js, Express js, SQL, MongoDB, Security and
-        Penetration testing, Access-Refresh Tokes etc. On the middle of 2020, I
-        got a job. I did the job for 1 year as Full Stack Developer. Now a days
-        I am working as a freelancer.
-      </p>
+        <p>
+          I have extensive experience in building complex web applications from
+          scratch to production, as well as maintaining and improving existing
+          applications. I am a deep understanding of front-end and back-end
+          development, as well as strong problem-solving skills.
+        </p>
+        <br />
+        <p>
+          I am a self-motivated and detail-oriented developer who constantly
+          seeks to improve his skills and stay up-to-date with the latest trends
+          and technologies in the field. I have a great team player and enjoy
+          working collaboratively with other developers, designers, and project
+          managers to deliver exceptional results.
+        </p>
+        <br />
+        <p>
+          In my free time, I enjoys reading about new web technologies,
+          participating in hackathons and online coding challenges, and
+          contributing to open-source projects.
+        </p>
+      </div>
     </div>
   );
 };

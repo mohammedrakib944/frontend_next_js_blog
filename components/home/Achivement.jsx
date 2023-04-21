@@ -35,7 +35,7 @@ const Achivement = () => {
             src={data.img.src}
             priority
             key={index}
-            className="rounded-lg max-w-full lg:max-w-[400px]"
+            className="rounded-lg max-w-full"
             alt={data.alt}
           />
         ))}
