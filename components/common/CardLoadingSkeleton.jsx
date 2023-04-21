@@ -4,7 +4,7 @@ const CardLoadingSkeleton = () => {
   return (
     <div
       role="status"
-      className="w-[340px] border border-gray-00 rounded animate-pulse p-3"
+      className="w-[340px] border border-gray-500/20 rounded animate-pulse p-3"
     >
       <div className="flex items-center justify-center h-48 mb-4 rounded-md bg-gray-700">
         <svg

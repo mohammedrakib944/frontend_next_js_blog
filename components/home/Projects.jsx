@@ -61,7 +61,7 @@ const Projects = () => {
             <div key={index} className="card rounded-sm group bg-base-100">
               <Link href={project.url} target="_blank">
                 <img
-                  className="h-[200px] w-[340px] border object-cover group-hover:scale-105 duration-200 rounded-md"
+                  className="h-[200px] w-[340px] object-cover group-hover:scale-105 duration-200 rounded-md"
                   alt={project.title}
                   src={project.img.src}
                 />

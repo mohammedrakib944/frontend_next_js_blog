@@ -25,7 +25,7 @@ const Hero = () => {
               }}
             />
           </h1>
-          <p className="py-5 text-gray-600 font-semibold">
+          <p className="py-5 text-gray-400 font-semibold">
             I am a Fullstack Web Developer & Competitive Programmer
           </p>
 

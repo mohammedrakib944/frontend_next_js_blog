@@ -52,10 +52,10 @@ const SinglePost = () => {
         <link rel="icon" href="/img/favicon.ico" />
       </Head>
 
-      <div className="px-6 py-2 text-gray-500 text-sm bg-white border-b z-20 sticky top-0">
+      <div className="px-6 py-2 text-gray-500 text-sm bg-[#2b2d3a] border-b border-gray-500/50 z-20 sticky top-0">
         <div className="flex justify-between gap-6">
           <Link
-            className="flex gap-3 items-center text-secondary font-bold"
+            className="flex gap-2 items-center text-slate-100 font-bold"
             href="/blog"
           >
             <IoMdArrowRoundBack /> All Articles
@@ -64,7 +64,7 @@ const SinglePost = () => {
             <span>Written by | </span>
             <Link
               href="/"
-              className="font-semibold text-secondary flex items-center gap-2 hover:text-success"
+              className="font-semibold text-slate-100 flex items-center gap-2 hover:text-success"
             >
               <img
                 className="rounded-full border"
@@ -123,14 +123,14 @@ const SinglePost = () => {
             <div className="h-2 bg-gray-700 rounded-full mb-6"></div>
           </div>
         ) : (
-          <div className="px-6 w-full lg:max-w-[700px] lg:pb-6 rounded-xl mx-auto">
+          <div className="px-6 w-full lg:max-w-[700px] lg:pb-6 mx-auto">
             {/* Ttile */}
             <h2 className="text-3xl font-bold mt-6 mb-1">
               {singlePost?.title}
             </h2>
             {/* Time */}
             <p className="text-neutral-content my-3">
-              <span className="pb-0 text-sm text-gray-500">
+              <span className="pb-0 text-sm text-gray-400">
                 <Moment format="D MMM YYYY" withTitle>
                   {singlePost?.date}
                 </Moment>
@@ -139,7 +139,7 @@ const SinglePost = () => {
             {/* Poster */}
             {singlePost?.img_name && (
               <img
-                className="w-full rounded-md border"
+                className="w-full rounded-md"
                 src={`https://api.rakibwrites.com/uploads/${singlePost?.img_name}`}
                 alt="Rakib | blog"
               />
@@ -153,10 +153,10 @@ const SinglePost = () => {
             </div>
 
             {/* Google adds section */}
-            <div className="w-full lg:w-[468px] rounded-md h-[160px] mt-10 bg-base-200"></div>
+            {/* <div className="w-full lg:w-[468px] rounded-md h-[160px] mt-10 bg-base-200"></div> */}
 
             {/* Go to posts */}
-            <p className="mt-10 py-4 text-lg text-secondary font-bold border-b border-t border-secondary text-center border-dashed">
+            <p className="mt-16 py-4 text-lg text-secondary font-bold border-b border-t border-secondary text-center border-dashed">
               THE END!
             </p>
             {/* <div className=" mb-10 pt-6 border-t border-secondary">
