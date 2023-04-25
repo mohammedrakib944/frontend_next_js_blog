@@ -34,7 +34,6 @@ const SinglePost = () => {
 
   useEffect(() => {
     if (slug) {
-      console.log("Slig: ", slug);
       fetchPost(slug);
     }
   }, [slug]);

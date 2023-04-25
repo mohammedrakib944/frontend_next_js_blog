@@ -58,10 +58,10 @@ const index = () => {
       </Head>
       {isLoading ? (
         <div>
-          <div class="animate-pulse flex flex-wrap gap-3 my-5 ml-3">
-            <div class="h-10 w-[180px] bg-gray-700 rounded-full mb-4"></div>
-            <div class="h-10 w-[180px] bg-gray-700 rounded-full mb-4"></div>
-            <div class="h-10 w-[180px] bg-gray-700 rounded-full mb-4"></div>
+          <div className="animate-pulse flex flex-wrap gap-3 my-5 ml-3">
+            <div className="h-10 w-[180px] bg-gray-700 rounded-full mb-4"></div>
+            <div className="h-10 w-[180px] bg-gray-700 rounded-full mb-4"></div>
+            <div className="h-10 w-[180px] bg-gray-700 rounded-full mb-4"></div>
           </div>
           <div className="grid md:grid-cols-2 place-items-center md:place-items-stretch  lg:grid-cols-3 gap-3">
             <CardLoadingSkeleton />
