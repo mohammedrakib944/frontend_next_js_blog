@@ -14,7 +14,7 @@ const Info = () => {
         </p>
         <br />
         <p>
-          And am a skilled Full Stack Web Developer with expertise in a range of
+          I am a skilled Full Stack Web Developer with expertise in a range of
           technologies including React JS, Next JS, Node JS, Express JS,
           MongoDB, HTML, CSS, and Tailwind CSS. I has a passion for developing
           high-quality, efficient, and user-friendly web applications.
@@ -28,7 +28,7 @@ const Info = () => {
         </p>
         <br />
         <p>
-          I am a self-motivated and detail-oriented developer who constantly
+          And I am self-motivated and detail-oriented developer who constantly
           seeks to improve his skills and stay up-to-date with the latest trends
           and technologies in the field. I have a great team player and enjoy
           working collaboratively with other developers, designers, and project
