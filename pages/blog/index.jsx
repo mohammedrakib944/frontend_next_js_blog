@@ -55,6 +55,7 @@ const index = () => {
     <>
       <Head>
         <link rel="icon" href="/img/favicon.ico" />
+        <title>Rakib - Articles</title>
       </Head>
       {isLoading ? (
         <div>

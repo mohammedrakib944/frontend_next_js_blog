@@ -8,6 +8,7 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 import { useState, useEffect } from "react";
 import axiosBase from "@/utils/axiosSetup";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 const MdEditor = dynamic(() => import("react-markdown-editor-lite"), {
   ssr: false,
@@ -107,82 +108,92 @@ const Edit = () => {
   };
 
   return (
-    <div className="px-6">
-      <ToastContainer theme="colored" />
-      <Link className="flex gap-3 items-center text-success" href="/dashboard">
-        <IoMdArrowRoundBack /> Dashboard
-      </Link>
+    <>
+      <Head>
+        <title>Rakib - Edit</title>
+      </Head>
+      <div className="px-6">
+        <ToastContainer theme="colored" />
+        <Link
+          className="flex gap-3 items-center text-success"
+          href="/dashboard"
+        >
+          <IoMdArrowRoundBack /> Dashboard
+        </Link>
 
-      <form onSubmit={handleEditPost}>
-        <p className="text-lg font-semibold mt-10 text-secondary/50">Title</p>
-        <input
-          required
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder="Type here"
-          className="w-full py-3 mb-3 text-2xl font-semibold focus:outline-none bg-transparent"
-        />
+        <form onSubmit={handleEditPost}>
+          <p className="text-lg font-semibold mt-10 text-secondary/50">Title</p>
+          <input
+            required
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            placeholder="Type here"
+            className="w-full py-3 mb-3 text-2xl font-semibold focus:outline-none bg-transparent"
+          />
 
-        <p className="text-lg font-semibold text-secondary/50">Short answer</p>
-        <input
-          required
-          type="text"
-          value={shortAns}
-          onChange={(e) => setShortAns(e.target.value)}
-          placeholder="Type here"
-          className="w-full py-3 mb-3 focus:outline-none bg-transparent"
-        />
+          <p className="text-lg font-semibold text-secondary/50">
+            Short answer
+          </p>
+          <input
+            required
+            type="text"
+            value={shortAns}
+            onChange={(e) => setShortAns(e.target.value)}
+            placeholder="Type here"
+            className="w-full py-3 mb-3 focus:outline-none bg-transparent"
+          />
 
-        <p className="text-lg font-semibold mt-2 mb-3 text-secondary/50">
-          Description
-        </p>
-        <MdEditor
-          value={markdownText}
-          style={{ height: "500px" }}
-          renderHTML={(markdown) => markdownParser.render(markdown)}
-          onChange={handleEditorChange}
-        />
-        <div className="flex flex-wrap items-center mt-10 gap-6 mb-10">
-          <div className="form-control w-full max-w-xs">
-            <label className="label">
-              <span className="label-text">Select Category</span>
-            </label>
-            <select
-              className="select select-bordered"
-              value={category}
-              onChange={(e) => {
-                setCategory(e.target.value);
-              }}
-            >
-              <option value="Programming">Programming</option>
-              <option value="Technology">Technology</option>
-              <option value="Lifestyle">Lifestyle</option>
-              <option value="News">News</option>
-            </select>
+          <p className="text-lg font-semibold mt-2 mb-3 text-secondary/50">
+            Description
+          </p>
+          <MdEditor
+            value={markdownText}
+            style={{ height: "500px" }}
+            renderHTML={(markdown) => markdownParser.render(markdown)}
+            onChange={handleEditorChange}
+          />
+          <div className="flex flex-wrap items-center mt-10 gap-6 mb-10">
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">Select Category</span>
+              </label>
+              <select
+                className="select select-bordered"
+                value={category}
+                onChange={(e) => {
+                  setCategory(e.target.value);
+                }}
+              >
+                <option value="Programming">Programming</option>
+                <option value="Technology">Technology</option>
+                <option value="Lifestyle">Lifestyle</option>
+                <option value="News">News</option>
+              </select>
+            </div>
           </div>
-        </div>
 
-        <div className="flex gap-3 my-8">
-          <Link href="/dashboard">
+          <div className="flex gap-3 my-8">
+            <Link href="/dashboard">
+              <button
+                disabled={isLoading}
+                type="button"
+                className="btn btn-secondary rounded-full px-5"
+              >
+                <IoMdArrowRoundBack /> &nbsp; Dashboard
+              </button>
+            </Link>
             <button
               disabled={isLoading}
-              type="button"
-              className="btn btn-secondary rounded-full px-5"
+              type="submit"
+              className="btn btn-success rounded-full px-6"
             >
-              <IoMdArrowRoundBack /> &nbsp; Dashboard
+              Edit Post
             </button>
-          </Link>
-          <button
-            disabled={isLoading}
-            type="submit"
-            className="btn btn-success rounded-full px-6"
-          >
-            Edit Post
-          </button>
-        </div>
-      </form>
-    </div>
+          </div>
+        </form>
+      </div>
+    </>
   );
 };
 

@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="hero-content flex-col gap-10 lg:flex-row">
         <img
           src={RakibImg.src}
-          alt="rakib"
+          alt="rakib Rakib"
           priority={true}
           width=""
           className="mask mask-squircle w-[290px] hover:-rotate-6 hover:scale-110 duration-200"

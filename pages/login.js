@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import useAuth from "@/utils/useAuth";
+import Head from "next/head";
 
 // rakib@w
 // pass@&1
@@ -45,39 +46,45 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-[480px]">
-      <ToastContainer theme="colored" />
-      <div>
-        <h2 className="text-3xl mx-auto text-center py-10 font-bold mt-10">
-          Admin Login
-        </h2>
+    <>
+      <Head>
+        <title>Rakib - Login</title>
+      </Head>
+
+      <div className="min-h-[480px]">
+        <ToastContainer theme="colored" />
         <div>
-          <form
-            className="flex flex-col gap-3 items-center"
-            onSubmit={handleLogin}
-          >
-            <input
-              type="text"
-              placeholder="Username"
-              onChange={(e) => setUsername(e.target.value)}
-              className="input input-bordered input-primary w-full max-w-xs"
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              onChange={(e) => setPassword(e.target.value)}
-              className="input input-bordered input-primary w-full max-w-xs"
-            />
-            <button
-              type="submit"
-              className="w-[250px] btn btn-primary rounded-full mt-4"
+          <h2 className="text-3xl mx-auto text-center py-10 font-bold mt-10">
+            Admin Login
+          </h2>
+          <div>
+            <form
+              className="flex flex-col gap-3 items-center"
+              onSubmit={handleLogin}
             >
-              Login
-            </button>
-          </form>
+              <input
+                type="text"
+                placeholder="Username"
+                onChange={(e) => setUsername(e.target.value)}
+                className="input input-bordered input-primary w-full max-w-xs"
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
+                className="input input-bordered input-primary w-full max-w-xs"
+              />
+              <button
+                type="submit"
+                className="w-[250px] btn btn-primary rounded-full mt-4"
+              >
+                Login
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
