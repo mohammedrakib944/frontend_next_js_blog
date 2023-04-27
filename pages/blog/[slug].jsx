@@ -8,6 +8,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Moment from "react-moment";
 import ReactMarkdown from "react-markdown";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const SinglePost = () => {
   const [singlePost, setSinglePost] = useState({});
@@ -137,10 +139,11 @@ const SinglePost = () => {
             </p>
             {/* Poster */}
             {singlePost?.img_name && (
-              <img
+              <LazyLoadImage
+                alt="Rakib rakib articles"
                 className="w-full rounded-md"
+                effect="blur"
                 src={`https://api.rakibwrites.com/uploads/${singlePost?.img_name}`}
-                alt="Rakib | blog"
               />
             )}
 

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Moment from "react-moment";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const CardVertical = ({ post }) => {
   const coverImage = post?.img_name
@@ -10,10 +12,11 @@ const CardVertical = ({ post }) => {
     <div className="card overflow-hidden max-w-[400px] min-w-[340px] bg-base-100 hover:shadow-xl duration-200 border mx-5 md:mx-0 rounded-lg border-gray-400/20">
       <Link href={`/blog/${post?.slug}`}>
         <figure>
-          <img
-            className="w-full h-[200px]  object-cover hover:scale-110 duration-200"
+          <LazyLoadImage
+            alt="Rakib rakib articles"
+            className="w-full h-[220px]"
+            effect="blur"
             src={coverImage}
-            alt="Rakib"
           />
         </figure>
       </Link>
