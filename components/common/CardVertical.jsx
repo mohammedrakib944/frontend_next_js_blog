@@ -30,7 +30,7 @@ const CardVertical = ({ post }) => {
           </span>
         </div>
         <Link href={`/blog/${post?.slug}`}>
-          <h2 className="card-title hover:text-success mb-2">
+          <h2 className="card-title hover:text-yellow-500 mb-2">
             {post?.title?.substring(0, 50)}...
           </h2>
         </Link>

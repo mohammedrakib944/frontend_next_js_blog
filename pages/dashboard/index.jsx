@@ -88,7 +88,7 @@ const dashboard = () => {
             </div>
             <div className="stat place-items-center">
               <Link href="/dashboard/create">
-                <button className="btn btn-sm btn-success px-3 rounded-full flex items-center gap-2">
+                <button className="btn btn-sm bg-yellow-500 text-black hover:bg-yellow-400 px-3 rounded-full flex items-center gap-2">
                   <AiOutlinePlus />{" "}
                   <span className="hidden md:block">Create New</span>
                 </button>

@@ -45,12 +45,12 @@ const Navbar = () => {
       </div>
       <div className="navbar-center">
         <Link href="/" className="normal-case text-xl font-bold">
-          <span className="text-success">Md.</span>Rakib
+          <span className="text-yellow-500">Md.</span>Rakib
         </Link>
       </div>
       <div className="navbar-end">
         <Link href="/blog">
-          <button className="btn btn-sm btn-success rounded-full flex items-center gap-2 md:mr-3">
+          <button className="btn btn-sm bg-yellow-500 text-black hover:bg-yellow-400 rounded-full flex items-center gap-2 md:mr-3">
             <span className="text-[12px] md:text-sm uppercase">
               ALL Articles
             </span>

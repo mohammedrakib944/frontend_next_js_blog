@@ -89,7 +89,7 @@ const Skills = () => {
 
       <div className="grid md:grid-cols-2">
         <div>
-          <h2 className="text-xl font-bold text-success mt-3">Front-End</h2>
+          <h2 className="text-xl font-bold text-yellow-500 mt-3">Front-End</h2>
           <div className="my-6">
             {frontendSkillls.map((skill, index) => (
               <div
@@ -109,7 +109,7 @@ const Skills = () => {
           </div>
         </div>
         <div>
-          <h2 className="text-xl font-bold text-success mt-3">Back-End</h2>
+          <h2 className="text-xl font-bold text-yellow-500 mt-3">Back-End</h2>
           <div className="flex flex-wrap gap-10 my-6">
             {backendSkillls.map((skill, index) => (
               <div key={index} className="flex flex-col items-center gap-3">
@@ -125,7 +125,7 @@ const Skills = () => {
           </div>
         </div>
         <div>
-          <h2 className="text-xl font-bold text-success mt-3">Database</h2>
+          <h2 className="text-xl font-bold text-yellow-500 mt-3">Database</h2>
           <div className="my-6">
             {databaseSkillls.map((skill, index) => (
               <div
@@ -145,7 +145,7 @@ const Skills = () => {
           </div>
         </div>
         <div>
-          <h2 className="text-xl font-bold text-success mt-3">
+          <h2 className="text-xl font-bold text-yellow-500 mt-3">
             Cyber Security
           </h2>
           <div className="my-6">
@@ -167,7 +167,7 @@ const Skills = () => {
           </div>
         </div>
         <div>
-          <h2 className="text-xl font-bold text-success mt-3">Others</h2>
+          <h2 className="text-xl font-bold text-yellow-500 mt-3">Others</h2>
           <div className="my-6">
             {othersSkillls.map((skill, index) => (
               <div

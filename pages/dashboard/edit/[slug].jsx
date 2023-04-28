@@ -115,7 +115,7 @@ const Edit = () => {
       <div className="px-6">
         <ToastContainer theme="colored" />
         <Link
-          className="flex gap-3 items-center text-success"
+          className="flex gap-3 items-center text-yellow-500"
           href="/dashboard"
         >
           <IoMdArrowRoundBack /> Dashboard
@@ -186,7 +186,7 @@ const Edit = () => {
             <button
               disabled={isLoading}
               type="submit"
-              className="btn btn-success rounded-full px-6"
+              className="btn bg-yellow-500 text-black hover:bg-yellow-400 rounded-full px-6"
             >
               Edit Post
             </button>

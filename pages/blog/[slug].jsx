@@ -65,7 +65,7 @@ const SinglePost = () => {
             <span>Written by | </span>
             <Link
               href="/"
-              className="font-semibold text-slate-100 flex items-center gap-2 hover:text-success"
+              className="font-semibold text-slate-100 flex items-center gap-2 hover:text-yellow-500"
             >
               <img
                 className="rounded-full border"
@@ -158,7 +158,7 @@ const SinglePost = () => {
             {/* <div className="w-full lg:w-[468px] rounded-md h-[160px] mt-10 bg-base-200"></div> */}
 
             {/* Go to posts */}
-            <p className="mt-16 py-4 text-lg text-secondary font-bold border-b border-t border-secondary text-center border-dashed">
+            <p className="mt-16 py-4 text-lg text-yellow-500 font-bold border-b border-t border-yellow-600 text-center border-dashed">
               THE END!
             </p>
             {/* <div className=" mb-10 pt-6 border-t border-secondary">

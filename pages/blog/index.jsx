@@ -79,7 +79,7 @@ const index = () => {
           <div className="px-6 md:px-0 mt-6 flex gap-3 mb-6 flex-wrap">
             <button
               className={`btn btn-sm rounded-full ${
-                cat === "" && "btn-success"
+                cat === "" && "bg-yellow-500 text-black hover:bg-yellow-400"
               }`}
               onClick={() => setCat("")}
             >
@@ -87,7 +87,8 @@ const index = () => {
             </button>
             <button
               className={`btn btn-sm rounded-full ${
-                cat === "Programming" && "btn-success"
+                cat === "Programming" &&
+                "bg-yellow-500 text-black hover:bg-yellow-400"
               }`}
               onClick={() => setCat("Programming")}
             >
@@ -95,7 +96,8 @@ const index = () => {
             </button>
             <button
               className={`btn btn-sm rounded-full ${
-                cat === "Technology" && "btn-success"
+                cat === "Technology" &&
+                "bg-yellow-500 text-black hover:bg-yellow-400"
               }`}
               onClick={() => setCat("Technology")}
             >
@@ -103,7 +105,7 @@ const index = () => {
             </button>
             <button
               className={`btn btn-sm rounded-full ${
-                cat === "News" && "btn-success"
+                cat === "News" && "bg-yellow-500 text-black hover:bg-yellow-400"
               }`}
               onClick={() => setCat("News")}
             >
@@ -111,14 +113,15 @@ const index = () => {
             </button>
             <button
               className={`btn btn-sm rounded-full ${
-                cat === "Lifestyle" && "btn-success"
+                cat === "Lifestyle" &&
+                "bg-yellow-500 text-black hover:bg-yellow-400"
               }`}
               onClick={() => setCat("Lifestyle")}
             >
               Lifestyle
             </button>
           </div>
-          <h1 className="border-l-2 pl-2 border-success text-xl font-bold mt-6 ml-6 md:ml-0 mb-4 text-secondary">
+          <h1 className="border-l-2 pl-2 border-yellow-500  text-xl font-bold mt-6 ml-6 md:ml-0 mb-4 text-yellow-600">
             RECENT
           </h1>
           <div className="grid md:grid-cols-2 place-items-center md:place-items-stretch  lg:grid-cols-3 gap-3">
@@ -129,7 +132,7 @@ const index = () => {
               )}
           </div>
           {articles.length > 3 && (
-            <h1 className="border-l-2 pl-2 border-success text-xl font-bold mt-10 ml-6 md:ml-0 mb-6 md:mb-4 text-secondary">
+            <h1 className="border-l-2 pl-2 border-yellow-500  text-xl font-bold mt-10 ml-6 md:ml-0 mb-6 md:mb-4 text-yellow-600">
               ALL ARTICLES
             </h1>
           )}
