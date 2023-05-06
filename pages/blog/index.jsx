@@ -55,7 +55,15 @@ const index = () => {
     <>
       <Head>
         <link rel="icon" href="/img/favicon.ico" />
-        <title>Rakib - Articles</title>
+        <title>Articles | Blogs</title>
+        <meta
+          name="description"
+          content="Md Rakib articles about programming and tech"
+        />
+        <meta
+          name="keywords"
+          content="Md Rakib, Rakib, Mohammad Rakib, Blog, Web developer, Programmer, React.js developer, Backend Developer, Front End developer, React js, Next js, express js, tailwind css, HTML, CSS, JavaScript"
+        />
       </Head>
       {isLoading ? (
         <div>

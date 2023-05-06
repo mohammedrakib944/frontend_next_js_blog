@@ -50,7 +50,7 @@ const databaseSkillls = [
   },
   {
     title: "MongoDB",
-    rating: 60,
+    rating: 80,
   },
 ];
 
@@ -76,7 +76,7 @@ const othersSkillls = [
   },
   {
     title: "Git/Github",
-    rating: 50,
+    rating: 70,
   },
 ];
 

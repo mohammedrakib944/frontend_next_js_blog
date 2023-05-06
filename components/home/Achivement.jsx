@@ -33,7 +33,7 @@ const Achivement = () => {
         {achive.map((data, index) => (
           <img
             src={data.img.src}
-            priority
+            priority="true"
             key={index}
             className="rounded-lg max-w-full"
             alt={data.alt}

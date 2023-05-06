@@ -1,5 +1,4 @@
 import { BsGithub, BsLinkedin, BsYoutube, BsFacebook } from "react-icons/bs";
-import Link from "next/link";
 
 const Socials = [
   {

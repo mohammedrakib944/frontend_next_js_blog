@@ -1,4 +1,4 @@
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsFacebook } from "react-icons/bs";
 import Typewriter from "typewriter-effect";
 import RakibImg from "../../public/img/rakib.jpg";
 
@@ -9,8 +9,8 @@ const Hero = () => {
         <img
           src={RakibImg.src}
           alt="rakib Rakib"
-          priority={true}
           width=""
+          property="true"
           className="mask mask-squircle w-[290px] hover:-rotate-6 hover:scale-110 duration-200"
         />
         <div className="lg:ml-6">
@@ -28,14 +28,33 @@ const Hero = () => {
           <p className="py-5 text-gray-400 font-semibold">
             I am a Fullstack Web Developer & Competitive Programmer
           </p>
+          <div className="flex gap-4">
+            <a
+              className="text-2xl hover:text-yellow-400"
+              href="https://github.com/mohammedrakib944"
+              target="_blank"
+              title="Github"
+            >
+              <BsGithub />
+            </a>
 
-          <a
-            className="text-2xl"
-            href="https://github.com/mohammedrakib944"
-            target="_blank"
-          >
-            <BsGithub />
-          </a>
+            <a
+              className="text-2xl hover:text-yellow-400"
+              href="https://www.linkedin.com/in/md-rakibuzzaman-246a701b2/"
+              target="_blank"
+              title="Linkedin"
+            >
+              <BsLinkedin />
+            </a>
+            <a
+              className="text-2xl hover:text-yellow-400"
+              href="https://www.facebook.com/md.rakib.38/"
+              target="_blank"
+              title="Facebook"
+            >
+              <BsFacebook />
+            </a>
+          </div>
         </div>
       </div>
     </div>

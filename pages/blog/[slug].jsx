@@ -49,6 +49,11 @@ const SinglePost = () => {
           content={singlePost?.short_ans}
           key={singlePost?.category}
         />
+        <meta property="og:title" content={singlePost.title} />
+        <meta
+          name="keywords"
+          content="Md Rakib, Rakib, Mohammad Rakib, Blog, Web developer, Programmer, React.js developer, Backend Developer, Front End developer, React js, Next js, express js, tailwind css, HTML, CSS, JavaScript"
+        />
         <meta name="robots" content="all" />
         <link rel="icon" href="/img/favicon.ico" />
       </Head>

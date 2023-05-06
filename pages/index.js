@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Rakib</title>
+        <title>Rakib | Web Developer | Full Stack</title>
         <meta
           name="google-site-verification"
           content="Gm6oaQ-g7cZq1rBMNPshtqbU65XJerVnXUo-3tmpMfs"
