@@ -63,8 +63,6 @@ const Create = () => {
         },
       });
 
-      console.log("Res: ", result.data);
-
       setPosts((prev) => [...prev, result?.data?.data]);
       toast.success("Post added!");
       setIsLoading(false);

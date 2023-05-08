@@ -7,3 +7,6 @@
   background-size: contain;
   background-position-y: 0px;
 }
+.lazy-load-image-background.blur.lazy-load-image-loaded {
+  width: 100%;
+}

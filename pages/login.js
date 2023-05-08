@@ -6,9 +6,6 @@ import "react-toastify/dist/ReactToastify.css";
 import useAuth from "@/utils/useAuth";
 import Head from "next/head";
 
-// rakib@w
-// pass@&1
-
 const Login = () => {
   // const { posts } = useContext(blogContext);
   const [username, setUsername] = useState("");

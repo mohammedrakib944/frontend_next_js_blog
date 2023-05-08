@@ -16,7 +16,14 @@ export default function Home() {
           name="google-site-verification"
           content="Gm6oaQ-g7cZq1rBMNPshtqbU65XJerVnXUo-3tmpMfs"
         />
-        <meta name="description" content="Md.Rakib Full Stack Web Developer" />
+        <meta
+          name="description"
+          content="Md.Rakib Full Stack Web Developer | Best web developer in Bangladesh | High skilled web developer"
+        />
+        <meta
+          name="keywords"
+          content="Best web developer in Bangladesh, Top web developer, web developer, Skilled Web developer, best programmer"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/img/favicon.ico" />
       </Head>
