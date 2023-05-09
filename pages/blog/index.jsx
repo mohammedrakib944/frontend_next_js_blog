@@ -6,7 +6,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { APIURL } from "@/utils/axiosSetup";
 
 // This gets called on every request
-export async function getStaticProps() {
+export async function getServerSideProps() {
   // Fetch data from external API
   const res = await fetch(`${APIURL}/post`);
   const data = await res.json();
