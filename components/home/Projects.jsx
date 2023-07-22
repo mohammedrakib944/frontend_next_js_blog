@@ -8,7 +8,15 @@ import movies from "../assets/projects/movies.png";
 import todo from "../assets/projects/todo.png";
 import Link from "next/link";
 
+import Image from "next/image";
+
 const projectsData = [
+  {
+    title: "React js - Movie View",
+    img: movies,
+    tech: "React.js, Tailwind CSS, REST API",
+    url: "https://rakib-moviex.netlify.app/",
+  },
   {
     title: "React.js, Context API TODO APP",
     img: todo,
@@ -55,7 +63,7 @@ const projectsData = [
 
 const Projects = () => {
   return (
-    <div className="mt-6 md:mt-28">
+    <div className="mt-6 md:mt-28 scroll-mt-[100px]" id="projects">
       <h1 className="text-2xl font-bold mb-2 uppercase border-l-2 border-primary pl-3">
         Projects
       </h1>
@@ -64,35 +72,29 @@ const Projects = () => {
           Explore <span className="font-bold">this website</span>. This is one
           of my full-stack project (Next.js, Tailwind CSS, Express.js, MySql).
         </h3>
-        <div className="grid lg:grid-rows-3 md:grid-cols-2 lg:grid-cols-8 gap-4 my-10">
-          <div className="lg:col-span-4 lg:row-span-2 card rounded-sm group bg-transparent">
-            <Link href={"https://rakib-moviex.netlify.app/"} target="_blank">
-              <img
-                className="group-hover:scale-105 duration-200 rounded-md"
-                alt="React js - Movie Details"
-                src={movies.src}
-              />
-            </Link>
-
-            <div className="card-body">
-              <p className="font-semibold text-center">React js - Movie View</p>
-            </div>
-          </div>
+        <div className="grid lg:grid-rows-3 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10">
           {projectsData.map((project, index) => (
             <div
               key={index}
-              className="card lg:col-span-2 rounded-sm group bg-transparent"
+              className="card rounded-sm bg-transparent relative group"
             >
               <Link href={project.url} target="_blank">
-                <img
-                  className="h-[200px] w-[340px] mx-auto object-cover group-hover:scale-105 duration-200 rounded-md"
+                <Image
+                  className="h-[200px] w-full mx-auto object-cover duration-200 rounded-md"
                   alt={project.title}
-                  src={project.img.src}
+                  width="100"
+                  height="100"
+                  src={project.img}
                 />
               </Link>
 
-              <div className="card-body">
-                <p className="font-semibold text-center">{project.title}</p>
+              <div className="card-body absolute w-full h-1/2 rounded-b-md -bottom-10 opacity-0 group-hover:opacity-100 group-hover:bottom-0 backdrop-blur-md bg-black/50 grid place-items-center duration-200">
+                <Link href={project.url} target="_blank">
+                  <p className="font-semibold text-center hover:underline">
+                    {project.title}
+                  </p>
+                </Link>
+                <span className="text-sm text-gray-300">{project.tech}</span>
               </div>
             </div>
           ))}

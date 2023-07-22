@@ -49,7 +49,7 @@ const Login = () => {
       </Head>
 
       <div className="min-h-[480px]">
-        <ToastContainer theme="colored" />
+        <ToastContainer theme="colosky" />
         <div>
           <h2 className="text-3xl mx-auto text-center py-10 font-bold mt-10">
             Admin Login
@@ -63,13 +63,13 @@ const Login = () => {
                 type="text"
                 placeholder="Username"
                 onChange={(e) => setUsername(e.target.value)}
-                className="input input-bordered input-primary w-full max-w-xs"
+                className="input input-bordesky input-primary w-full max-w-xs"
               />
               <input
                 type="password"
                 placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
-                className="input input-bordered input-primary w-full max-w-xs"
+                className="input input-bordesky input-primary w-full max-w-xs"
               />
               <button
                 type="submit"

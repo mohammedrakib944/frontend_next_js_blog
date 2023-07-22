@@ -8,7 +8,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { useRouter } from "next/router";
 
-// get all the possible paths for the individual ingredients
+// get all the possible paths for the individual ingskyients
 export async function getStaticPaths() {
   const { data } = await axiosBase("/post");
   const paths = data?.data?.map((post) => ({
@@ -51,7 +51,7 @@ const SinglePost = ({ data }) => {
         <link rel="icon" href="/img/favicon.ico" />
       </Head>
 
-      <div className="px-6 py-2 text-gray-500 text-sm bg-[#2b2d3a] border-b border-gray-500/50 z-20 sticky top-0">
+      <div className="px-6 py-2 -mt-[120px] backdrop-blur-md text-gray-500 text-sm border-gray-500/50 z-20 sticky top-0">
         <div className="flex justify-between gap-6">
           <Link
             className="flex gap-2 items-center text-slate-100 font-bold"
@@ -60,10 +60,10 @@ const SinglePost = ({ data }) => {
             <IoMdArrowRoundBack /> All Articles
           </Link>
           <div className="flex items-center gap-2">
-            <span>Written by | </span>
+            <span className="text-gray-300">Written by | </span>
             <Link
               href="/"
-              className="font-semibold text-slate-100 flex items-center gap-2 hover:text-yellow-500"
+              className="font-semibold text-white flex items-center gap-2 hover:underline"
             >
               <img
                 className="rounded-full border"
@@ -80,7 +80,7 @@ const SinglePost = ({ data }) => {
       <div className="flex lg:gap-6">
         <div className="px-6 w-full lg:max-w-[700px] lg:pb-6 mx-auto">
           {/* Ttile */}
-          <h2 className="text-3xl font-bold mt-6 mb-1">{Post?.title}</h2>
+          <h2 className="text-3xl font-bold mt-24 mb-1">{Post?.title}</h2>
           {/* Time */}
           <p className="text-neutral-content my-3">
             <span className="pb-0 text-sm text-gray-400">
@@ -110,7 +110,7 @@ const SinglePost = ({ data }) => {
           {/* <div className="w-full lg:w-[468px] rounded-md h-[160px] mt-10 bg-base-200"></div> */}
 
           {/* Go to posts */}
-          <p className="mt-16 py-4 text-lg text-yellow-500 font-bold border-b border-t border-yellow-600 text-center border-dashed">
+          <p className="mt-16 py-4 text-lg text-sky-500 font-bold border-b border-t border-sky-600 text-center border-dashed">
             THE END!
           </p>
           {/* <div className=" mb-10 pt-6 border-t border-secondary">

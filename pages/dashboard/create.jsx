@@ -85,9 +85,9 @@ const Create = () => {
         <title>Rakib - Create</title>
       </Head>
       <div className="px-6">
-        <ToastContainer theme="colored" />
+        <ToastContainer theme="colosky" />
         <Link
-          className="flex gap-3 items-center text-yellow-500"
+          className="flex gap-3 items-center text-sky-500"
           href="/dashboard"
         >
           <IoMdArrowRoundBack /> Dashboard
@@ -96,7 +96,7 @@ const Create = () => {
         <form onSubmit={handleCreatePost}>
           <p className="text-lg font-semibold mt-10 text-secondary">Title</p>
           <input
-            required
+            requisky
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -106,7 +106,7 @@ const Create = () => {
 
           <p className="text-lg font-semibold text-secondary">Short answer</p>
           <input
-            required
+            requisky
             type="text"
             value={shortAns}
             onChange={(e) => setShortAns(e.target.value)}
@@ -131,7 +131,7 @@ const Create = () => {
                 type="file"
                 name="images"
                 onChange={(e) => setImage(e.target.files[0])}
-                className="file-input file-input-bordered w-full max-w-xs"
+                className="file-input file-input-bordesky w-full max-w-xs"
               />
             </div>
 
@@ -141,7 +141,7 @@ const Create = () => {
               </label>
               <select
                 onChange={(e) => setCategory(e.target.value)}
-                className="select select-bordered"
+                className="select select-bordesky"
               >
                 <option>Programming</option>
                 <option>Technology</option>
@@ -164,7 +164,7 @@ const Create = () => {
             <button
               disabled={isLoading}
               type="submit"
-              className="btn bg-yellow-500 text-black hover:bg-yellow-400 rounded-full px-6"
+              className="btn bg-sky-500 text-black hover:bg-sky-400 rounded-full px-6"
             >
               Create Post
             </button>

@@ -64,7 +64,7 @@ export default function index({ data }) {
             <AiOutlineSearch />
           </span>
         </div>
-        <h1 className="border-l-2 pl-2 border-yellow-500  text-xl font-bold mt-6 ml-6 md:ml-0 mb-4 text-yellow-600">
+        <h1 className="border-l-2 pl-2 border-sky-500  text-xl font-bold mt-6 ml-6 md:ml-0 mb-4 text-sky-600">
           Aticles
         </h1>
         <div className="px-6 md:px-0 mt-6 flex gap-3 mb-6 flex-wrap">
@@ -76,8 +76,7 @@ export default function index({ data }) {
           </button>
           <button
             className={`btn btn-sm rounded-full ${
-              cat === "Programming" &&
-              "bg-yellow-500 text-black hover:bg-yellow-400"
+              cat === "Programming" && "bg-sky-500 text-black hover:bg-sky-400"
             }`}
             onClick={() => setCat("Programming")}
           >
@@ -85,8 +84,7 @@ export default function index({ data }) {
           </button>
           <button
             className={`btn btn-sm rounded-full ${
-              cat === "Technology" &&
-              "bg-yellow-500 text-black hover:bg-yellow-400"
+              cat === "Technology" && "bg-sky-500 text-black hover:bg-sky-400"
             }`}
             onClick={() => setCat("Technology")}
           >
@@ -94,7 +92,7 @@ export default function index({ data }) {
           </button>
           <button
             className={`btn btn-sm rounded-full ${
-              cat === "News" && "bg-yellow-500 text-black hover:bg-yellow-400"
+              cat === "News" && "bg-sky-500 text-black hover:bg-sky-400"
             }`}
             onClick={() => setCat("News")}
           >
@@ -102,8 +100,7 @@ export default function index({ data }) {
           </button>
           <button
             className={`btn btn-sm rounded-full ${
-              cat === "Lifestyle" &&
-              "bg-yellow-500 text-black hover:bg-yellow-400"
+              cat === "Lifestyle" && "bg-sky-500 text-black hover:bg-sky-400"
             }`}
             onClick={() => setCat("Lifestyle")}
           >

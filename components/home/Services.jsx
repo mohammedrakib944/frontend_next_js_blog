@@ -24,7 +24,7 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="mt-6 md:mt-28">
+    <div className="mt-6 md:mt-28 scroll-mt-[100px]" id="services">
       <h1 className="text-2xl font-bold mb-2 uppercase border-l-2 border-primary pl-3">
         Services
       </h1>
@@ -32,13 +32,11 @@ const Services = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="card min-w-[160px] text-center max-w-[350px] bg-base-100 shadow-xl border-gray-500/20 hover:text-yellow-500 hover:shadow-none duration-200 border"
+            className="card min-w-[160px] bg-gradient-to-tr from-sky-500 to-[#fc00ff] text-center max-w-[350px] shadow-xl hover:shadow-none duration-200 rounded-lg"
           >
             <div className="card-body flex gap-3 flex-col justify-center items-center">
-              <div className="text-4xl py-3 text-yellow-500">
-                {service.icon}
-              </div>
-              <h2 className="text-lg font-semibold uppercase">
+              <div className="text-4xl py-3 text-black">{service.icon}</div>
+              <h2 className="font-semibold text-white uppercase">
                 {service.title}
               </h2>
             </div>

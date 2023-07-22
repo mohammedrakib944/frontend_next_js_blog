@@ -9,7 +9,7 @@ const Socials = [
   {
     title: "Youtube",
     icon: <BsYoutube />,
-    link: "https://www.youtube.com/@mohammadrakib2809/featured",
+    link: "https://www.youtube.com/@mohammadrakib2809/featusky",
   },
   {
     title: "Facebook",
@@ -38,23 +38,6 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        {/* <div className="flex flex-wrap gap-4">
-          <Link href="/blog" className="link link-hover">
-            My Blog
-          </Link>
-          <Link href="/" className="link link-hover">
-            Home
-          </Link>
-          <Link href="/about" className="link link-hover">
-            About
-          </Link>
-          <Link href="/contact" className="link link-hover">
-            Contact
-          </Link>
-          <Link href="/privary" className="link link-hover">
-            Privary Policy
-          </Link>
-        </div> */}
         <div>
           <p>Copyright (c) 2023 mohammedrakib944</p>
         </div>

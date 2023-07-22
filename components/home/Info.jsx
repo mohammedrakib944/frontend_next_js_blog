@@ -1,8 +1,9 @@
-import React from "react";
-
 const Info = () => {
   return (
-    <div className="mt-6 md:mt-28 max-w-[600px]">
+    <div
+      id="about"
+      className="mt-16 md:mt-28 max-w-[600px] mx-auto scroll-mt-[100px]"
+    >
       <h1 className="text-2xl font-bold mb-4 border-l-2 border-primary pl-3">
         ABOUT ME
       </h1>
@@ -41,6 +42,8 @@ const Info = () => {
           contributing to open-source projects.
         </p>
       </div>
+      <br />
+      <br />
     </div>
   );
 };

@@ -82,14 +82,14 @@ const othersSkillls = [
 
 const Skills = () => {
   return (
-    <div className="mt-6 md:mt-28">
+    <div className="mt-6 md:mt-28 scroll-mt-[100px]" id="skills">
       <h1 className="text-2xl font-bold mb-2 border-l-2 border-primary pl-3">
         SKILLS
       </h1>
 
       <div className="grid md:grid-cols-2">
         <div>
-          <h2 className="text-xl font-bold text-yellow-500 mt-3">Front-End</h2>
+          <h2 className="text-xl font-bold text-sky-500 mt-3">Front-End</h2>
           <div className="my-6">
             {frontendSkillls.map((skill, index) => (
               <div
@@ -97,7 +97,7 @@ const Skills = () => {
                 className="flex flex-col md:flex-row gap-4 py-2 md:items-center"
               >
                 <progress
-                  className="progress progress-secondary w-56"
+                  className="progress progress-secondary bg-sky-500 w-56"
                   value={skill.rating}
                   max="100"
                 ></progress>
@@ -109,12 +109,12 @@ const Skills = () => {
           </div>
         </div>
         <div>
-          <h2 className="text-xl font-bold text-yellow-500 mt-3">Back-End</h2>
+          <h2 className="text-xl font-bold text-sky-500 mt-3">Back-End</h2>
           <div className="flex flex-wrap gap-10 my-6">
             {backendSkillls.map((skill, index) => (
               <div key={index} className="flex flex-col items-center gap-3">
                 <div
-                  className="radial-progress text-secondary"
+                  className="radial-progress bg-sky-500 text-secondary"
                   style={{ "--value": skill.rating }}
                 >
                   {skill.rating}%
@@ -125,7 +125,7 @@ const Skills = () => {
           </div>
         </div>
         <div>
-          <h2 className="text-xl font-bold text-yellow-500 mt-3">Database</h2>
+          <h2 className="text-xl font-bold text-sky-500 mt-3">Database</h2>
           <div className="my-6">
             {databaseSkillls.map((skill, index) => (
               <div
@@ -133,7 +133,7 @@ const Skills = () => {
                 className="flex flex-col md:flex-row gap-4 py-2 md:items-center"
               >
                 <progress
-                  className="progress progress-secondary w-56"
+                  className="progress bg-sky-500 w-56"
                   value={skill.rating}
                   max="100"
                 ></progress>
@@ -145,7 +145,7 @@ const Skills = () => {
           </div>
         </div>
         <div>
-          <h2 className="text-xl font-bold text-yellow-500 mt-3">
+          <h2 className="text-xl font-bold text-sky-500 mt-3">
             Cyber Security
           </h2>
           <div className="my-6">
@@ -155,7 +155,7 @@ const Skills = () => {
                 className="flex flex-col md:flex-row gap-4 py-2 md:items-center"
               >
                 <progress
-                  className="progress progress-secondary w-56"
+                  className="progress progress-secondary bg-sky-500 w-56"
                   value={skill.rating}
                   max="100"
                 ></progress>
@@ -167,7 +167,7 @@ const Skills = () => {
           </div>
         </div>
         <div>
-          <h2 className="text-xl font-bold text-yellow-500 mt-3">Others</h2>
+          <h2 className="text-xl font-bold text-sky-500 mt-3">Others</h2>
           <div className="my-6">
             {othersSkillls.map((skill, index) => (
               <div
@@ -175,7 +175,7 @@ const Skills = () => {
                 className="flex flex-col md:flex-row gap-4 py-2 md:items-center"
               >
                 <progress
-                  className="progress progress-secondary w-56"
+                  className="progress bg-sky-500 w-56"
                   value={skill.rating}
                   max="100"
                 ></progress>

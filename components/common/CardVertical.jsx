@@ -9,7 +9,7 @@ const CardVertical = ({ post }) => {
     : "https://unper.ac.id/wp-content/plugins/tutor/assets/images/placeholder-.jpg";
 
   return (
-    <div className="card overflow-hidden max-w-[400px] min-w-[340px] duration-200 border mx-auto rounded-lg border-gray-400/20 mb-4 hover:scale-105">
+    <div className="card overflow-hidden max-w-[400px] min-w-[340px] duration-200 border mx-auto rounded-lg border-gray-400/20 mb-4 lg:hover:scale-105">
       <Link href={`/blog/${post?.slug}`}>
         <LazyLoadImage
           alt="Rakib rakib articles"
@@ -28,9 +28,7 @@ const CardVertical = ({ post }) => {
           </span>
         </div>
         <Link href={`/blog/${post?.slug}`}>
-          <h2 className="card-title hover:text-yellow-500 mb-2">
-            {post?.title}
-          </h2>
+          <h2 className="card-title hover:text-sky-500 mb-2">{post?.title}</h2>
         </Link>
         <p className="text-gray-400">{post?.short_ans}</p>
       </div>

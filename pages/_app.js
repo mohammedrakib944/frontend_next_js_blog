@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <ContextProdiver>
-        <NextNProgress color="#f1c40f" />
+        <NextNProgress color="#87CEEB" />
         <Layout>
           <Component {...pageProps} />
         </Layout>

@@ -74,7 +74,7 @@ const dashboard = () => {
         <title>Rakib - Dashboard</title>
       </Head>
       <div className="px-6">
-        <ToastContainer theme="colored" />
+        <ToastContainer theme="colosky" />
         <div>
           <h2 className="text-lg mt-4 font-semibold uppercase">DASHBOARD</h2>
         </div>
@@ -88,7 +88,7 @@ const dashboard = () => {
             </div>
             <div className="stat place-items-center">
               <Link href="/dashboard/create">
-                <button className="btn btn-sm bg-yellow-500 text-black hover:bg-yellow-400 px-3 rounded-full flex items-center gap-2">
+                <button className="btn btn-sm bg-sky-500 text-black hover:bg-sky-400 px-3 rounded-full flex items-center gap-2">
                   <AiOutlinePlus />{" "}
                   <span className="hidden md:block">Create New</span>
                 </button>
@@ -97,7 +97,7 @@ const dashboard = () => {
             <div className="stat place-items-center">
               <button
                 onClick={handleLogOut}
-                className="btn btn-sm bg-blue-600 border-none px-3 rounded-full flex items-center gap-2"
+                className="btn btn-sm bg-sky-600 border-none px-3 rounded-full flex items-center gap-2"
               >
                 <IoMdLogOut />
                 <span className="hidden md:block">Logout</span>
@@ -109,7 +109,7 @@ const dashboard = () => {
             type="text"
             placeholder="Search by ID"
             onChange={(e) => setSearch(e.target.value)}
-            className="input input-bordered rounded-full px-5"
+            className="input input-bordesky rounded-full px-5"
           />
         </div>
 

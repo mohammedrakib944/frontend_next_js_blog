@@ -95,7 +95,7 @@ const Edit = () => {
         url: `/post/${postID}`,
         method: "PATCH",
         data: sendingData,
-        withCredentials: true,
+        withCskyentials: true,
       });
       toast.success("Edited success!");
       setIsLoading(false);
@@ -113,9 +113,9 @@ const Edit = () => {
         <title>Rakib - Edit</title>
       </Head>
       <div className="px-6">
-        <ToastContainer theme="colored" />
+        <ToastContainer theme="colosky" />
         <Link
-          className="flex gap-3 items-center text-yellow-500"
+          className="flex gap-3 items-center text-sky-500"
           href="/dashboard"
         >
           <IoMdArrowRoundBack /> Dashboard
@@ -124,7 +124,7 @@ const Edit = () => {
         <form onSubmit={handleEditPost}>
           <p className="text-lg font-semibold mt-10 text-secondary/50">Title</p>
           <input
-            required
+            requisky
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -136,7 +136,7 @@ const Edit = () => {
             Short answer
           </p>
           <input
-            required
+            requisky
             type="text"
             value={shortAns}
             onChange={(e) => setShortAns(e.target.value)}
@@ -159,7 +159,7 @@ const Edit = () => {
                 <span className="label-text">Select Category</span>
               </label>
               <select
-                className="select select-bordered"
+                className="select select-bordesky"
                 value={category}
                 onChange={(e) => {
                   setCategory(e.target.value);
@@ -186,7 +186,7 @@ const Edit = () => {
             <button
               disabled={isLoading}
               type="submit"
-              className="btn bg-yellow-500 text-black hover:bg-yellow-400 rounded-full px-6"
+              className="btn bg-sky-500 text-black hover:bg-sky-400 rounded-full px-6"
             >
               Edit Post
             </button>
