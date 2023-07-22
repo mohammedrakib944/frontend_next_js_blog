@@ -1,82 +1,69 @@
-import React from "react";
+import html from "../assets/skills/html.png";
+import css from "../assets/skills/css.png";
+import javascript from "../assets/skills/javascript.png";
+import tailwind from "../assets/skills/tailwind.png";
+import react from "../assets/skills/react.png";
+import next from "../assets/skills/next.png";
+import next13 from "../assets/skills/next13.png";
+import cpp from "../assets/skills/cpp.png";
+import node from "../assets/skills/node.png";
+import express from "../assets/skills/express.png";
+import mongo from "../assets/skills/mongo.png";
+import mysql from "../assets/skills/mysql.png";
 
-const frontendSkillls = [
+import Image from "next/image";
+
+const FrontEnd = [
   {
-    title: "HTML",
-    rating: 90,
+    title: "HTML 5",
+    image: html,
   },
   {
-    title: "CSS",
-    rating: 92,
+    title: "CSS 3/4",
+    image: css,
   },
   {
     title: "Tailwind CSS",
-    rating: 95,
+    image: tailwind,
   },
   {
     title: "Javascript",
-    rating: 85,
+    image: javascript,
   },
   {
-    title: "React js",
-    rating: 95,
+    title: "React.js",
+    image: react,
   },
   {
-    title: "Next js",
-    rating: 85,
-  },
-];
-
-const backendSkillls = [
-  {
-    title: "Express js",
-    rating: 80,
-  },
-  {
-    title: "Node js",
-    rating: 70,
-  },
-
-  {
-    title: "PHP",
-    rating: 50,
+    title: "Next.js",
+    image: next,
   },
 ];
 
-const databaseSkillls = [
+const BackEnd = [
   {
-    title: "MySQL",
-    rating: 75,
+    title: "C++",
+    image: cpp,
+  },
+  {
+    title: "Node.js",
+    image: node,
+  },
+  {
+    title: "Express.js",
+    image: express,
+  },
+  {
+    title: "Next.js 13",
+    image: next13,
   },
   {
     title: "MongoDB",
-    rating: 80,
-  },
-];
-
-const cyberSecuritySkillls = [
-  {
-    title: "Networking",
-    rating: 40,
+    image: mongo,
   },
   {
-    title: "Penitation Testing",
-    rating: 30,
-  },
-];
-
-const othersSkillls = [
-  {
-    title: "UI/UX",
-    rating: 60,
-  },
-  {
-    title: "Competitve Programming",
-    rating: 40,
-  },
-  {
-    title: "Git/Github",
-    rating: 70,
+    title: "MySQL",
+    image: mysql,
   },
 ];
 
@@ -87,106 +74,45 @@ const Skills = () => {
         SKILLS
       </h1>
 
-      <div className="grid md:grid-cols-2">
-        <div>
-          <h2 className="text-xl font-bold text-sky-500 mt-3">Front-End</h2>
-          <div className="my-6">
-            {frontendSkillls.map((skill, index) => (
-              <div
-                key={index}
-                className="flex flex-col md:flex-row gap-4 py-2 md:items-center"
-              >
-                <progress
-                  className="progress progress-secondary bg-sky-500 w-56"
-                  value={skill.rating}
-                  max="100"
-                ></progress>
-                <span className="font-bold">
-                  {skill.rating}% - {skill.title}
-                </span>
-              </div>
-            ))}
-          </div>
+      <div>
+        <h3 className="px-6 py-3 my-6 font-semibold text-[#fc00ff] border-b border-[#fc00ff] text-xl w-fit mx-auto">
+          Front-End
+        </h3>
+        <div className="grid grid-cols-3 gap-4 lg:gap-0 lg:grid-cols-6 place-items-center">
+          {FrontEnd.map((item, index) => (
+            <div className="flex flex-col items-center gap-3" key={index}>
+              <Image
+                className="rounded-full w-[80px] lg:w-[115px] h-[80px] lg:h-[115px] shadow-md shadow-sky-400 hover:shadow-none duration-150"
+                src={item.image}
+                width="115"
+                height="115"
+                alt={item.title}
+              />
+              <p className="text-sm md:text-base font-semibold">{item.title}</p>
+            </div>
+          ))}
         </div>
-        <div>
-          <h2 className="text-xl font-bold text-sky-500 mt-3">Back-End</h2>
-          <div className="flex flex-wrap gap-10 my-6">
-            {backendSkillls.map((skill, index) => (
-              <div key={index} className="flex flex-col items-center gap-3">
-                <div
-                  className="radial-progress bg-sky-500 text-secondary"
-                  style={{ "--value": skill.rating }}
-                >
-                  {skill.rating}%
-                </div>
-                <span className="font-bold">{skill.title}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div>
-          <h2 className="text-xl font-bold text-sky-500 mt-3">Database</h2>
-          <div className="my-6">
-            {databaseSkillls.map((skill, index) => (
-              <div
-                key={index}
-                className="flex flex-col md:flex-row gap-4 py-2 md:items-center"
-              >
-                <progress
-                  className="progress bg-sky-500 w-56"
-                  value={skill.rating}
-                  max="100"
-                ></progress>
-                <span className="font-bold">
-                  {skill.rating}% - {skill.title}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div>
-          <h2 className="text-xl font-bold text-sky-500 mt-3">
-            Cyber Security
-          </h2>
-          <div className="my-6">
-            {cyberSecuritySkillls.map((skill, index) => (
-              <div
-                key={index}
-                className="flex flex-col md:flex-row gap-4 py-2 md:items-center"
-              >
-                <progress
-                  className="progress progress-secondary bg-sky-500 w-56"
-                  value={skill.rating}
-                  max="100"
-                ></progress>
-                <span className="font-bold">
-                  {skill.rating}% - {skill.title}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div>
-          <h2 className="text-xl font-bold text-sky-500 mt-3">Others</h2>
-          <div className="my-6">
-            {othersSkillls.map((skill, index) => (
-              <div
-                key={index}
-                className="flex flex-col md:flex-row gap-4 py-2 md:items-center"
-              >
-                <progress
-                  className="progress bg-sky-500 w-56"
-                  value={skill.rating}
-                  max="100"
-                ></progress>
-                <span className="font-bold">
-                  {skill.rating}% - {skill.title}
-                </span>
-              </div>
-            ))}
-          </div>
+        <br />
+        <br />
+        <h3 className="px-6 py-3 my-6 font-semibold text-sky-500 border-b border-sky-500 text-xl w-fit mx-auto">
+          Back-End
+        </h3>
+        <div className="grid grid-cols-3 gap-4 lg:gap-0 lg:grid-cols-6 place-items-center">
+          {BackEnd.map((item, index) => (
+            <div className="flex flex-col items-center gap-3" key={index}>
+              <Image
+                className="rounded-full w-[80px] lg:w-[115px] h-[80px] lg:h-[115px] shadow-md shadow-sky-400 hover:shadow-none duration-150"
+                src={item.image}
+                width="115"
+                height="115"
+                alt={item.title}
+              />
+              <p className="text-sm md:text-base font-semibold">{item.title}</p>
+            </div>
+          ))}
         </div>
       </div>
+      <div className="h-[50px]"></div>
     </div>
   );
 };

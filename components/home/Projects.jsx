@@ -6,11 +6,18 @@ import nftMarket from "../assets/projects/NFT.png";
 import movie from "../assets/projects/movie.png";
 import movies from "../assets/projects/movies.png";
 import todo from "../assets/projects/todo.png";
+import EcommerceNew from "../assets/projects/Ecmmerce.png";
 import Link from "next/link";
 
 import Image from "next/image";
 
 const projectsData = [
+  {
+    title: "Ecommerce with Dashboard",
+    img: EcommerceNew,
+    tech: "Next.js 13, Tailwind CSS, Express.js, MongoDB",
+    url: "https://ecommerce-ruddy-one.vercel.app",
+  },
   {
     title: "React js - Movie View",
     img: movies,
@@ -88,13 +95,13 @@ const Projects = () => {
                 />
               </Link>
 
-              <div className="card-body absolute w-full h-1/2 rounded-b-md -bottom-10 opacity-0 group-hover:opacity-100 group-hover:bottom-0 backdrop-blur-md bg-black/50 grid place-items-center duration-200">
+              <div className="card-body absolute w-full h-1/2 rounded-b-md -bottom-10 opacity-0 group-hover:opacity-100 group-hover:bottom-0 backdrop-blur-md bg-black/70 grid place-items-center duration-200">
                 <Link href={project.url} target="_blank">
-                  <p className="font-semibold text-center hover:underline">
+                  <p className="font-semibold text-white text-center hover:underline">
                     {project.title}
                   </p>
                 </Link>
-                <span className="text-sm text-gray-300">{project.tech}</span>
+                <span className="text-xs text-gray-300">{project.tech}</span>
               </div>
             </div>
           ))}
