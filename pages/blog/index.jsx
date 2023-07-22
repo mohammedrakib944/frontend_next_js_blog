@@ -69,7 +69,7 @@ export default function index({ data }) {
         </h1>
         <div className="px-6 md:px-0 mt-6 flex gap-3 mb-6 flex-wrap">
           <button
-            className={`btn btn-sm rounded-full bg-orange-500 text-black hover:bg-orange-400`}
+            className={`btn btn-sm rounded-full bg-sky-500 text-black hover:bg-sky-400`}
             onClick={setDataOnArticles}
           >
             ALL
@@ -107,7 +107,7 @@ export default function index({ data }) {
             Lifestyle
           </button>
         </div>
-        <div className="md:columns-2 lg:columns-3 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 lg:gap-4">
           {data &&
             articles
               .filter((post) =>

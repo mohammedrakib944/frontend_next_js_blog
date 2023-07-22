@@ -28,9 +28,11 @@ const CardVertical = ({ post }) => {
           </span>
         </div>
         <Link href={`/blog/${post?.slug}`}>
-          <h2 className="card-title hover:text-sky-500 mb-2">{post?.title}</h2>
+          <h2 className="card-title hover:text-sky-500 hover:underline mb-2">
+            {post?.title}
+          </h2>
         </Link>
-        <p className="text-gray-400">{post?.short_ans}</p>
+        <p className="text-gray-400">{post?.short_ans?.slice(0, 50)} ...</p>
       </div>
     </div>
   );
