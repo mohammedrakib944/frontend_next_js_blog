@@ -8,7 +8,7 @@ import { APIURL } from "@/utils/axiosSetup";
 // This gets called on every request
 export async function getServerSideProps() {
   // Fetch data from external API
-  const res = await fetch(`${APIURL}/post`);
+  const res = await fetch(`${APIURL}/post`, { next: { revalidate: 600 } });
   const data = await res.json();
   return { props: { data } };
 }
