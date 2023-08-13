@@ -6,12 +6,14 @@ import Link from "next/link";
 const ParticlesWrapper = () => {
   const router = useRouter();
 
-  return (
+  return router.pathname === "/" ? (
     <div className="background-gradient pb-16">
       <Navbar />
-      {!router.pathname.includes("blog") && <Hero />}
+      <Hero />
       <div className="h-[80px]"></div>
     </div>
+  ) : (
+    <Navbar />
   );
 };
 

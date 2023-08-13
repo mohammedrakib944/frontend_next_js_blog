@@ -13,7 +13,7 @@ const Navbar = () => {
             <div className="flex gap-2 items-center">
               <label
                 tabIndex={0}
-                className="btn btn-ghost btn-circle text-xl text-black"
+                className="btn btn-ghost btn-circle text-xl text-white border border-white/60"
               >
                 <BiMenuAltLeft />
               </label>
@@ -21,12 +21,12 @@ const Navbar = () => {
                 href="/"
                 className="normal-case text-xl font-bold text-white"
               >
-                <span className="text-black">Md.</span>Rakib
+                <span className="text-white/80">Md.</span>Rakib
               </Link>
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 border border-gray-500/50 rounded-box w-52"
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 border border-gray-500/50 rounded-box w-52 z-50"
             >
               <li>
                 <Link href="/">Home</Link>
@@ -72,8 +72,8 @@ const Navbar = () => {
         )}
         <div className="navbar-end">
           <Link href="/blog">
-            <button className="btn btn-sm bg-black rounded-full flex items-center gap-2 md:mr-3">
-              <span className="text-[12px] md:text-sm uppercase">
+            <button className="btn btn-sm bg-black border border-white/70 rounded-full flex items-center gap-2 md:mr-3">
+              <span className="text-[12px] md:text-sm capitalize">
                 Article blog
               </span>
             </button>

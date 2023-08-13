@@ -28,13 +28,13 @@ const Hero = () => {
               }}
             />
           </h1>
-          <p className="py-2 text-gray-200 font-semibold">
+          <p className="py-2 text-white/70 font-semibold">
             React.js Developer | Great backend knowledge & Competitive
             Programmer
           </p>
           <div className="flex gap-4 mt-4 text-black">
             <a
-              className="text-xl"
+              className="text-xl hover:text-white duration-200"
               href="https://github.com/mohammedrakib944"
               target="_blank"
               title="Github"
@@ -43,7 +43,7 @@ const Hero = () => {
             </a>
 
             <a
-              className="text-xl"
+              className="text-xl hover:text-white duration-200"
               href="https://www.linkedin.com/in/md-rakibuzzaman-246a701b2/"
               target="_blank"
               title="Linkedin"
@@ -51,7 +51,7 @@ const Hero = () => {
               <BsLinkedin />
             </a>
             <a
-              className="text-xl"
+              className="text-xl hover:text-white duration-200"
               href="https://www.facebook.com/md.rakib.38/"
               target="_blank"
               title="Facebook"

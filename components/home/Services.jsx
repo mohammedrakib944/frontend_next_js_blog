@@ -32,11 +32,11 @@ const Services = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="card min-w-[160px] bg-gradient-to-tr from-sky-500 to-[#fc00ff] text-center max-w-[350px] shadow-xl hover:shadow-none duration-200 rounded-lg"
+            className="card min-w-[160px] hover:scale-105 bg-gradient-to-tr from-sky-500 to-[#087277] text-center max-w-[350px] shadow-xl hover:shadow-none duration-200 rounded-lg"
           >
             <div className="card-body flex gap-3 flex-col justify-center items-center">
-              <div className="text-4xl py-3 text-black">{service.icon}</div>
-              <h2 className="font-semibold text-white uppercase">
+              <div className="text-4xl py-3 text-white">{service.icon}</div>
+              <h2 className="font-semibold text-black uppercase">
                 {service.title}
               </h2>
             </div>

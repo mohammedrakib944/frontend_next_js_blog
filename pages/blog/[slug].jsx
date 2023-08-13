@@ -51,7 +51,7 @@ const SinglePost = ({ data }) => {
         <link rel="icon" href="/img/favicon.ico" />
       </Head>
 
-      <div className="px-6 py-2 -mt-[120px] backdrop-blur-md text-gray-500 text-sm border-gray-500/50 z-20 sticky top-0">
+      <div className="px-6 py-2 mt-3 backdrop-blur-lg text-gray-500 text-sm border-gray-500/50 bg-indigo-600 ">
         <div className="flex justify-between gap-6">
           <Link
             className="flex gap-2 items-center text-slate-100 font-bold"
@@ -80,7 +80,7 @@ const SinglePost = ({ data }) => {
       <div className="flex lg:gap-6">
         <div className="px-6 w-full lg:max-w-[700px] lg:pb-6 mx-auto">
           {/* Ttile */}
-          <h2 className="text-3xl font-bold mt-24 mb-1">{Post?.title}</h2>
+          <h2 className="text-3xl font-bold mt-10 mb-1">{Post?.title}</h2>
           {/* Time */}
           <p className="text-neutral-content my-3">
             <span className="pb-0 text-sm text-gray-400">
