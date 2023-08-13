@@ -1,11 +1,9 @@
 import Achivement from "@/components/home/Achivement";
-import Hero from "@/components/home/Hero";
 import Info from "@/components/home/Info";
 import Projects from "@/components/home/Projects";
 import Services from "@/components/home/Services";
 import Skills from "@/components/home/Skills";
 import Head from "next/head";
-import Link from "next/link";
 
 export default function Home() {
   return (

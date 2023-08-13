@@ -29,7 +29,8 @@ const Hero = () => {
             />
           </h1>
           <p className="py-2 text-gray-200 font-semibold">
-            Fullstack Web Developer & Competitive Programmer
+            React.js Developer | Great backend knowledge & Competitive
+            Programmer
           </p>
           <div className="flex gap-4 mt-4 text-black">
             <a

@@ -6,6 +6,7 @@ import nftMarket from "../assets/projects/NFT.png";
 import movie from "../assets/projects/movie.png";
 import movies from "../assets/projects/movies.png";
 import todo from "../assets/projects/todo.png";
+import Photo from "../assets/projects/photo.png";
 import EcommerceNew from "../assets/projects/Ecmmerce.png";
 import Link from "next/link";
 
@@ -29,6 +30,12 @@ const projectsData = [
     img: todo,
     tech: "React.js, Tailwind CSS",
     url: "https://react-context-to-do.vercel.app",
+  },
+  {
+    title: "Photo viewer",
+    img: Photo,
+    tech: "Next.js 13, Tailwind CSS, Express.js",
+    url: "https://photographer-frontend.vercel.app",
   },
   {
     title: "Dorac (NFT Marketplace)",

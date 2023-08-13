@@ -9,10 +9,7 @@ const Info = () => {
       </h1>
       <br />
       <div className="text-lg">
-        <p>
-          My Name is Md.Rakibuzzaman (Rakib). I am an undergraduate computer
-          science student.
-        </p>
+        <p>Hi!, I'm Md.Rakibuzzaman (Rakib) a computer science student.</p>
         <br />
         <p>
           I am a skilled Full Stack Web Developer with expertise in a range of
@@ -27,6 +24,14 @@ const Info = () => {
           applications. I am a deep understanding of front-end and back-end
           development, as well as strong problem-solving skills.
         </p>
+        <br />
+        <p>" সময়,স্রোত আর JavaScript কারো জন্য অপেক্ষা করে না 😁 "</p>
+        <p className="min-w-[100px] h-[1px] my-2 bg-white/40"></p>
+        <p className="float-right mb-4 text-sm">
+          By the way, <span className="font-semibold">Javascript</span> is my
+          favorite Language
+        </p>
+        <br />
         <br />
         <p>
           And I am self-motivated and detail-oriented developer who constantly
