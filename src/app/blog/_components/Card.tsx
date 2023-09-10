@@ -11,7 +11,7 @@ const PostCard = ({ post }: { post: any }) => {
       <Link href={`/blog/${post?.slug}`}>
         <img
           alt="Rakib rakib articles"
-          className="w-full object-cover lg:group-hover:scale-105 duration-200"
+          className="w-full rounded-lg object-cover lg:group-hover:scale-105 duration-200"
           //   effect="blur"
           src={coverImage}
         />
