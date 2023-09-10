@@ -6,7 +6,7 @@ const Contact = () => {
     <div className="layout text-center mb-24 md:mb-40" id="contact">
       <h3 className="title">Contact</h3>
       <h2 className="text-accent font-extrabold pt-3 pb-10 ">
-        Don't be shy! Hit me up! 👇
+        Don't be shy! Send me email! 👇
       </h2>
       <div className="flex flex-col md:flex-row justify-center gap-5 md:gap-12">
         <div className="flex gap-4 items-center text-left">
