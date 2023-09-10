@@ -1,10 +1,30 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { jwtVerify } from "jose";
 
 const Navbar = () => {
   const pathname = usePathname();
+  const [isValid, setIsValid] = useState<boolean>(false);
+
+  const checkAuth = async () => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      //   Verify Token
+      const secret = new TextEncoder().encode("rakib@^secret#key");
+      const res = await jwtVerify(token, secret);
+      const { user } = res.payload;
+      if (user === "Rakib") {
+        setIsValid(true);
+      }
+    }
+  };
+
+  useEffect(() => {
+    checkAuth();
+  }, []);
+
   return (
     <div className="w-full bg-white shadow-sm fixed top-0 z-50">
       <div className="max-w-[1300px] mx-auto py-3 px-3 flex justify-between items-center">
@@ -15,7 +35,8 @@ const Navbar = () => {
           </Link>
         </div>
         {/* links */}
-        {pathname.includes("/blog") ? (
+
+        {pathname.includes("/blog") && (
           <div className="flex gap-4">
             <Link
               className="font-semibold text-sm hover:text-primary duration-300"
@@ -30,7 +51,9 @@ const Navbar = () => {
               Blog
             </Link>
           </div>
-        ) : (
+        )}
+
+        {pathname === "/" && (
           <div className="navbar-center hidden md:block">
             <div className="text-sm flex gap-5 font-semibold">
               <a className="hover:text-primary duration-300" href="#">
@@ -52,35 +75,37 @@ const Navbar = () => {
           </div>
         )}
 
-        {/* login */}
-        <Link href="#">
-          <button className="btn_sm">Login</button>
-        </Link>
-        {/* <div className="dropdown dropdown-end dropdown-hover">
-          <label tabIndex={0} className="btn_sm m-1">
-            Admin
-          </label>
-          <ul
-            tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 border"
-          >
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="/blog">Articles</Link>
-            </li>
-            <li>
-              <Link href="/dashboard">Dashboard</Link>
-            </li>
-            <li>
-              <Link href="/dashboard/create">Write Article</Link>
-            </li>
-            <li>
-              <Link href="/login">Login</Link>
-            </li>
-          </ul>
-        </div> */}
+        {isValid ? (
+          <div className="dropdown dropdown-end dropdown-hover">
+            <label tabIndex={0} className="btn_sm m-1">
+              Dashboard
+            </label>
+            <ul
+              tabIndex={0}
+              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 border"
+            >
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/blog">Articles</Link>
+              </li>
+              <li>
+                <Link href="/dashboard">Dashboard</Link>
+              </li>
+              <li>
+                <Link href="/dashboard/create">Write Article</Link>
+              </li>
+              <li>
+                <Link href="/login">Login</Link>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <Link href="/login">
+            <button className="btn_sm">Login</button>
+          </Link>
+        )}
       </div>
     </div>
   );
