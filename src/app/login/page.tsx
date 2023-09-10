@@ -10,7 +10,6 @@ import Loading from "@/components/Loading";
 const page = () => {
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const [isChecking, setIsChecking] = useState(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const router = useRouter();
@@ -18,7 +17,6 @@ const page = () => {
   const checkAuth = async () => {
     const token = localStorage.getItem("token");
     if (token) {
-      setIsChecking(true);
       //   Verify Token
       const secret = new TextEncoder().encode("rakib@^secret#key");
       const res = await jwtVerify(token, secret);
@@ -26,7 +24,6 @@ const page = () => {
       if (user === "Rakib") {
         router.push("/dashboard");
       }
-      setIsChecking(false);
     }
   };
 
@@ -59,13 +56,6 @@ const page = () => {
       setIsLoading(false);
     }
   };
-
-  if (isChecking)
-    return (
-      <div className="mt-20">
-        <Loading title="Auth checking..." />
-      </div>
-    );
 
   return (
     <div className="mt-24 layout">
