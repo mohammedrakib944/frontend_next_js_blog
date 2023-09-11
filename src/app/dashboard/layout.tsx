@@ -25,7 +25,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
     checkAuth();
   }, []);
 
-  return <div className="max-w-[1200px] mx-auto my-20">{children}</div>;
+  return <div className="max-w-[1200px] px-4 mx-auto my-20">{children}</div>;
 };
 
 export default layout;
