@@ -1,19 +1,9 @@
 import React from "react";
-import { notFound } from "next/navigation";
-import apiURL from "@/api/baseURL";
 import PostCard from "./_components/Card";
-
-async function getData() {
-  const res = await fetch(`${apiURL}/post`, { next: { revalidate: 600 } });
-
-  if (!res.ok) {
-    return notFound();
-  }
-  return res.json();
-}
+import { fetchPosts } from "@/utils/fetchPosts";
 
 const page = async () => {
-  const data = await getData();
+  const data = await fetchPosts();
 
   return (
     <div className="layout mt-20 mb-20">
