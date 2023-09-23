@@ -15,7 +15,7 @@ type changeFrequency =
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await fetchPosts();
   const changeFrequency = "daily" as changeFrequency;
-  console.log("FUkcakljdf: ", posts);
+
   const postsData = posts.data.map(
     ({ slug, date }: { slug: string; date: string }) => ({
       url: `${WEBSITE_URL}/blog/${slug}`,

@@ -16,6 +16,31 @@ async function getData(slug: string) {
   return res.json();
 }
 
+// Daynamic Metadata
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  try {
+    const post = await getData(params.slug);
+    const { title, slug, short_ans } = post.data;
+    return {
+      title,
+      description: short_ans,
+      alternates: {
+        canonical: `/blog/${slug}`,
+      },
+    };
+  } catch (error) {
+    console.log(error);
+    return {
+      title: "Not Found",
+      description: "The page you are looking for does not exist.",
+    };
+  }
+}
+
 const page = async ({ params }: { params: { slug: string } }) => {
   const post = await getData(params.slug);
   const { title, date, img_name, description } = post.data;
@@ -26,7 +51,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
       <div>
         <img
           alt="Rakib rakib articles"
-          className="w-full rounded-md"
+          className="w-full min-h-[500px] bg-gray-500 rounded-md"
           src={`https://api.rakibwrites.com/uploads/${img_name}`}
         />
       </div>

@@ -9,7 +9,11 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Rakib | Web Developer",
+  metadataBase: new URL("https://www.myselfrakib.com"),
+  title: {
+    default: "Rakib | Web Developer",
+    template: `%s | Rakib | Web Developer`,
+  },
   description:
     "Full Stack web developer, MERN stack developer, React.js Developer",
 };

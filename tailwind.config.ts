@@ -15,7 +15,7 @@ const config: Config = {
           primary: "#147efb", // blue
           secondary: "#555", // less black
           accent: "#2d2e32", // text-primary
-          neutral: "#767676", // text-secondary
+          neutral: "#555659", // text-secondary
           "base-100": "#f9f9f9", // gray background
         },
       },
