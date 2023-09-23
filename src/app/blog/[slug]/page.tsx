@@ -51,7 +51,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
       <div>
         <img
           alt="Rakib rakib articles"
-          className="w-full min-h-[500px] bg-gray-500 rounded-md"
+          className="w-full rounded-md"
           src={`https://api.rakibwrites.com/uploads/${img_name}`}
         />
       </div>
