@@ -71,6 +71,12 @@ const Navbar = () => {
               <a className="hover:text-primary duration-300" href="#contact">
                 Contact
               </a>
+              <Link
+                className="font-semibold text-sm hover:text-primary duration-300"
+                href="/blog"
+              >
+                Blog
+              </Link>
             </div>
           </div>
         )}
