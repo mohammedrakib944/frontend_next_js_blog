@@ -24,6 +24,7 @@ import instagram from "../../assets/projects/instagram.png";
 import movie from "../../assets/projects/movie.png";
 import portfolio from "../../assets/projects/portfolio.png";
 import todo from "../../assets/projects/todo.png";
+import articleBlog from "../../assets/projects/articleblog.png";
 
 export const Icons = {
   facebook,
@@ -89,6 +90,25 @@ export const BackEnd = [
 ];
 
 export const ProjectsData = [
+  {
+    id: 1,
+    image: articleBlog,
+    reverse: true,
+    title: "Article Blog - Full Stack",
+    date: "November 2023",
+    description:
+      "Multi vendor website - A article Blog site. Where user can create account using there google or Github account, write article and publish them. Other users can comment. It has admin panel too. Where admin can perform all common task, like banned user, delete article, etc. It can toogle between light and dark mode.",
+    tech: [
+      "Next.js 14",
+      "TypeScript",
+      "Redux",
+      "Tailwind CSS",
+      "Express.js",
+      "MySql",
+    ],
+    github: "https://github.com/mohammedrakib944/blog-frontend",
+    live: "https://rakib-blog.vercel.app",
+  },
   {
     image: ecommerce,
     reverse: false,
