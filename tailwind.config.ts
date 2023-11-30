@@ -12,12 +12,13 @@ const config: Config = {
     themes: [
       {
         nightdark: {
-          primary: "#00ADB5", // blue
+          primary: "#00f397", // blue
           secondary: "#393E46", // less black
           accent: "#ddd", // text-primary
           neutral: "#b8b6b6", // text-secondary
-          "base-100": "#222831", // gray background
-          "base-200": "#191d24", // dark background
+          "base-100": "#191d24", // dark background
+          "base-200": "#222831", // gray background
+          "base-300": "#2b323d", // dark background
         },
         daylight: {
           primary: "#147efb", // blue

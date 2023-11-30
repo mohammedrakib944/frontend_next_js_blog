@@ -10,7 +10,7 @@ const Skills = () => {
     >
       <h3 className="title">Tech Stack</h3>
       <h2 className="text-accent font-extrabold pt-3 pb-10 ">
-        Expert on this Tech Stacks ⚙️
+        Main Tech Stacks ⚙️
       </h2>
       <div>
         <div className="flex flex-col items-center md:items-start">
@@ -18,7 +18,7 @@ const Skills = () => {
             {FrontEnd.map((item, index) => (
               <React.Fragment key={index}>
                 <Image
-                  className="bg-white hover:scale-105 duration-200 rounded-lg shadow-md w-[80px]"
+                  className="bg-white hover:scale-105 duration-200 rounded-lg shadow-md w-[100px]"
                   src={item.image}
                   alt="Md Rakib"
                 />
@@ -29,7 +29,7 @@ const Skills = () => {
             {BackEnd.map((item, index) => (
               <React.Fragment key={index}>
                 <Image
-                  className="bg-white hover:scale-105 duration-200 rounded-lg shadow-md w-[80px]"
+                  className="bg-white hover:scale-105 duration-200 rounded-lg shadow-md w-[100px]"
                   src={item.image}
                   alt="Md Rakib"
                 />

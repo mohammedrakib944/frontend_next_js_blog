@@ -43,7 +43,7 @@ body {
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 3px solid #2d2e32;
+  border: 10px solid;
   border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   width: 330px;
   height: 330px;

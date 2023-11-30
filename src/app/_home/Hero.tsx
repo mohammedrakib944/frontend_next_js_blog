@@ -18,26 +18,45 @@ const Hero = () => {
             Bangladesh 📌
           </p>
           <div className="w-fit text-lg flex mt-6 gap-3 mx-auto md:mx-0">
-            <Link href="https://github.com/mohammedrakib944" target="_blank">
+            <Link
+              href="https://github.com/mohammedrakib944"
+              className="tooltip"
+              data-tip="Github"
+              target="_blank"
+            >
               <FaGithub />
             </Link>
 
             <Link
               href="https://www.linkedin.com/in/md-rakibuzzaman-246a701b2"
               target="_blank"
+              className="tooltip"
+              data-tip="Linkedin"
             >
               <FaLinkedin />
             </Link>
 
-            <Link href="https://www.facebook.com/md.rakib.38" target="_blank">
+            <Link
+              href="https://www.facebook.com/md.rakib.38"
+              className="tooltip"
+              data-tip="Facebook"
+              target="_blank"
+            >
               <FaFacebook />
             </Link>
           </div>
-
           <Link href="/blog">
-            <button className="btn mt-12 bg-gradient-to-r border border-accent text-accent  hover:border-accent hover:shadow-lg duration-200 rounded-md">
+            <button className="btn mt-12 border border-accent text-accent  hover:border-accent hover:shadow-lg duration-200 rounded-md">
               Read my articles
             </button>
+          </Link>
+          &nbsp; &nbsp;
+          <Link
+            href="https://docs.google.com/document/d/1leNqEKWa02aYm8Wl8IJfh9qz6ZTK1QNeHv2VGF6z_ME/edit?usp=sharing"
+            target="_blank"
+            className="btn mt-12 border border-accent text-accent  hover:border-accent hover:shadow-lg duration-200 rounded-md"
+          >
+            Resume
           </Link>
         </div>
         <div className="order-1 md:order-2">

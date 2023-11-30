@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="bg-white py-16 md:py-32" id="about">
+    <div className="bg-base-200 py-16 md:py-32" id="about">
       <div className="layout flex flex-col items-center md:flex-row gap-10">
         <div>
           <Image
