@@ -11,7 +11,15 @@ const config: Config = {
   daisyui: {
     themes: [
       {
-        rakib: {
+        nightdark: {
+          primary: "#00ADB5", // blue
+          secondary: "#393E46", // less black
+          accent: "#ddd", // text-primary
+          neutral: "#b8b6b6", // text-secondary
+          "base-100": "#222831", // gray background
+          "base-200": "#191d24", // dark background
+        },
+        daylight: {
           primary: "#147efb", // blue
           secondary: "#555", // less black
           accent: "#2d2e32", // text-primary

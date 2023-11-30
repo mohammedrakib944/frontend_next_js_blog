@@ -2,11 +2,13 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { MdWbSunny } from "react-icons/md";
 import { jwtVerify } from "jose";
 
 const Navbar = () => {
   const pathname = usePathname();
   const [isValid, setIsValid] = useState<boolean>(false);
+  const [isLight, setIsLight] = useState(false);
 
   const checkAuth = async () => {
     const token = localStorage.getItem("token");
@@ -21,17 +23,37 @@ const Navbar = () => {
     }
   };
 
+  const handleChangeTheme = (e: any) => {
+    const theme = e.target.checked ? "daylight" : "nightdark";
+    localStorage.setItem("theme", theme);
+    changeTheme();
+  };
+
+  const changeTheme = () => {
+    const theme: string = localStorage.getItem("theme") || "nightdark";
+    if (theme === "nightdark") {
+      setIsLight(false);
+    } else {
+      setIsLight(true);
+    }
+    document.documentElement.setAttribute("data-theme", theme);
+  };
+
+  useEffect(() => {
+    changeTheme();
+  }, []);
+
   useEffect(() => {
     checkAuth();
   }, []);
 
   return (
-    <div className="w-full bg-white shadow-sm fixed top-0 z-50">
+    <div className="w-full bg-base-200 fixed top-0 z-50">
       <div className="max-w-[1300px] mx-auto py-3 px-3 flex justify-between items-center">
         {/* logo */}
         <div className="text-accent text-2xl font-bold">
           <Link href="/">
-            <span className="text-neutral">Md.</span>Rakib
+            <span className="text-primary">Md.</span>Rakib
           </Link>
         </div>
         {/* links */}
@@ -81,6 +103,19 @@ const Navbar = () => {
           </div>
         )}
 
+        <div className="flex gap-2 items-center">
+          <input
+            type="checkbox"
+            className="toggle toggle-sm"
+            onChange={handleChangeTheme}
+            checked={isLight}
+            id="theme"
+          />
+          <label htmlFor="theme" className="cursor-pointer">
+            <MdWbSunny />
+          </label>
+        </div>
+
         {isValid ? (
           <div className="dropdown dropdown-end dropdown-hover">
             <label tabIndex={0} className="btn_sm m-1">
@@ -109,7 +144,7 @@ const Navbar = () => {
           </div>
         ) : (
           <Link href="/login">
-            <button className="btn_sm">Login</button>
+            <button className="btn_sm bg-base-100">Login</button>
           </Link>
         )}
       </div>

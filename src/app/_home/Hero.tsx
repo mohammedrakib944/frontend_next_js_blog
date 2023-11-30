@@ -1,7 +1,6 @@
 import React from "react";
-import Image from "next/image";
-import { Icons } from "./data";
 import Link from "next/link";
+import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -13,40 +12,30 @@ const Hero = () => {
             Full-Stack Web Developer 👋🏼
           </h1>
           <p className="text-neutral mt-6">
-            Hi, I'm Rakib. A Full-Stack Web Developer. Expert on
-            React.js/Next.js. <br /> From Pabna, Bangladesh 📌
+            Hi, I'm Rakib. A Full-Stack Web Developer. Proficient in{" "}
+            <span className="text-primary">JavaScript</span> and{" "}
+            <span className="text-primary">React.js</span> <br /> From Pabna,
+            Bangladesh 📌
           </p>
-          <div className="w-fit flex mt-6 gap-2 mx-auto md:mx-0">
+          <div className="w-fit text-lg flex mt-6 gap-3 mx-auto md:mx-0">
             <Link href="https://github.com/mohammedrakib944" target="_blank">
-              <Image
-                className="w-6 opacity-70 hover:opacity-100 duration-200"
-                src={Icons.github}
-                alt="Github"
-              />
+              <FaGithub />
             </Link>
 
             <Link
               href="https://www.linkedin.com/in/md-rakibuzzaman-246a701b2"
               target="_blank"
             >
-              <Image
-                className="w-6 opacity-70 hover:opacity-100 duration-200"
-                src={Icons.linkedin}
-                alt="Github"
-              />
+              <FaLinkedin />
             </Link>
 
             <Link href="https://www.facebook.com/md.rakib.38" target="_blank">
-              <Image
-                className="w-6 opacity-70 hover:opacity-100 duration-200"
-                src={Icons.facebook}
-                alt="Github"
-              />
+              <FaFacebook />
             </Link>
           </div>
 
           <Link href="/blog">
-            <button className="btn mt-12 bg-gradient-to-r bg-white border-2 border-accent text-accent hover:bg-white hover:border-accent hover:shadow-lg duration-200 rounded-md">
+            <button className="btn mt-12 bg-gradient-to-r border border-accent text-accent  hover:border-accent hover:shadow-lg duration-200 rounded-md">
               Read my articles
             </button>
           </Link>
