@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -46,17 +47,17 @@ const Hero = () => {
             </Link>
           </div>
           <Link href="/blog">
-            <button className="btn mt-12 border border-accent text-accent  hover:border-accent hover:shadow-lg duration-200 rounded-md">
-              Read my articles
+            <button className="btn mt-12 border border-accent text-accent  hover:border-accent hover:shadow-lg duration-200 rounded-full">
+              Read my articles <FaAngleRight />
             </button>
           </Link>
           &nbsp; &nbsp;
           <Link
             href="https://docs.google.com/document/d/1leNqEKWa02aYm8Wl8IJfh9qz6ZTK1QNeHv2VGF6z_ME/edit?usp=sharing"
             target="_blank"
-            className="btn mt-12 border border-accent text-accent  hover:border-accent hover:shadow-lg duration-200 rounded-md"
+            className="bg-gradient-to-tr from-primary via-transparent to-transparent  btn mt-12 border border-accent text-accent  hover:border-accent hover:shadow-lg duration-200 rounded-full"
           >
-            Resume
+            Resume <FaAngleRight />
           </Link>
         </div>
         <div className="order-1 md:order-2">
