@@ -47,7 +47,7 @@ const Hero = () => {
             </Link>
           </div>
           <Link href="/blog">
-            <button className="bg-gradient-to-tr from-primary via-transparent to-transparent btn mt-12 border border-accent text-accent  hover:border-accent hover:shadow-lg duration-200 rounded-full">
+            <button className="btn mt-12 border border-accent text-accent  hover:border-accent hover:shadow-lg duration-200 rounded-full">
               Read my articles <FaAngleRight />
             </button>
           </Link>
