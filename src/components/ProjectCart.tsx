@@ -33,7 +33,7 @@ const ProjectCart = ({ data }: { data: ProjectType }) => {
                 src={data.image}
                 alt="ecommerce"
               />
-            </Link>
+            </Link> 
           </div>
           <div className="order-1 mt-3 text-center">
             <div className="pb-3">
