@@ -29,11 +29,11 @@ const ProjectCart = ({ data }: { data: ProjectType }) => {
           <div className="md:order-2 min-w-[300px] lg:min-w-[400px] lg:h-[450px] rounded-lg border border-base-300 overflow-hidden">
             <Link href={data.live} target="_blank">
               <Image
-                className="project-image duration-1000"
+                className="project-image duration-200"
                 src={data.image}
                 alt="ecommerce"
               />
-            </Link> 
+            </Link>
           </div>
           <div className="order-1 mt-3 text-center">
             <div className="pb-3">
@@ -80,7 +80,7 @@ const ProjectCart = ({ data }: { data: ProjectType }) => {
           >
             <Link href={data.live} target="_blank">
               <Image
-                className="project-image duration-1000"
+                className="project-image duration-200"
                 src={data.image}
                 alt="ecommerce"
               />

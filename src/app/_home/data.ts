@@ -25,6 +25,7 @@ import movie from "../../assets/projects/movie.png";
 import portfolio from "../../assets/projects/portfolio.png";
 import todo from "../../assets/projects/todo.png";
 import articleBlog from "../../assets/projects/articleblog.png";
+import db from "../../assets/projects/db.png";
 
 export const Icons = {
   facebook,
@@ -173,5 +174,15 @@ export const ProjectsData = [
     tech: ["React.js", "CSS 3"],
     github: "https://github.com/mohammedrakib944/dorac-2.0",
     live: "https://rakib-dorac-2.netlify.app/",
+  },
+  {
+    image: db,
+    reverse: false,
+    title: "Startup Portfolio",
+    date: "August 2021",
+    description: "A landing website for Decentralized Brains",
+    tech: ["React.js", "CSS 3"],
+    github: "https://github.com/mohammedrakib944",
+    live: "https://rakib-db.netlify.app/",
   },
 ];

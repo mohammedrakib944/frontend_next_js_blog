@@ -14,9 +14,9 @@ const Hero = () => {
           </h1>
           <p className="text-neutral mt-6">
             Hi, I'm Rakib. A Full-Stack Web Developer. Proficient in{" "}
-            <span className="text-primary">JavaScript</span> and{" "}
-            <span className="text-primary">React.js</span> <br /> From Pabna,
-            Bangladesh 📌
+            <span className="text-primary italic">JavaScript</span> and{" "}
+            <span className="text-primary italic">React.js</span> <br /> From
+            Pabna, Bangladesh 📌
           </p>
           <div className="w-fit text-lg flex mt-6 gap-3 mx-auto md:mx-0">
             <Link
@@ -47,7 +47,7 @@ const Hero = () => {
             </Link>
           </div>
           <Link href="/blog">
-            <button className="btn mt-12 border border-accent text-accent  hover:border-accent hover:shadow-lg duration-200 rounded-full">
+            <button className="btn border border-primary mt-12 text-accent  hover:border-accent hover:shadow-lg duration-200 rounded-full">
               Read my articles <FaAngleRight />
             </button>
           </Link>
@@ -55,7 +55,7 @@ const Hero = () => {
           <Link
             href="https://docs.google.com/document/d/1leNqEKWa02aYm8Wl8IJfh9qz6ZTK1QNeHv2VGF6z_ME/edit?usp=sharing"
             target="_blank"
-            className="bg-gradient-to-tr from-primary via-transparent to-transparent  btn mt-12 border border-accent text-accent  hover:border-accent hover:shadow-lg duration-200 rounded-full"
+            className="bg-gradient-to-tr from-primary via-transparent to-transparent  btn mt-12 border text-accent  hover:border-accent hover:shadow-lg duration-200 rounded-full"
           >
             Resume <FaAngleRight />
           </Link>

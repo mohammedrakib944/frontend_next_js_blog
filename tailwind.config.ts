@@ -16,8 +16,8 @@ const config: Config = {
           secondary: "#393E46", // less black
           accent: "#ddd", // text-primary
           neutral: "#b8b6b6", // text-secondary
-          "base-100": "#222831", // gray background
-          "base-200": "#191d24", // dark background
+          "base-100": "#011d37", // gray background
+          "base-200": "#000f1c", // dark background
           "base-300": "#2b323d", // dark background
         },
         daylight: {

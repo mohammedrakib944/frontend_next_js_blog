@@ -65,9 +65,10 @@ body {
 
 .project-image {
   width: 100%;
+  filter: brightness(0.5);
 }
 .project-image:hover {
-  transform: translateY(-100px);
+  filter: none;
 }
 
 .prose {
