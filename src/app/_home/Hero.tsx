@@ -46,7 +46,7 @@ const Hero = () => {
               <FaFacebook />
             </Link>
           </div>
-          <Link href="/blog">
+          <Link href="https://rakib-blog.vercel.app/" target="_blank">
             <button className="btn border border-primary mt-12 text-accent  hover:border-accent hover:shadow-lg duration-200 rounded-full">
               Read my articles <FaAngleRight />
             </button>
