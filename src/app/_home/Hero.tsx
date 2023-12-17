@@ -14,9 +14,9 @@ const Hero = () => {
           </h1>
           <p className="text-neutral mt-6">
             Hi, I'm Rakib. A Full-Stack Web Developer. Proficient in{" "}
-            <span className="text-primary italic">JavaScript</span> and{" "}
-            <span className="text-primary italic">React.js</span> <br /> From
-            Pabna, Bangladesh 📌
+            <span className="text-primary">JavaScript</span> and{" "}
+            <span className="text-primary">React.js</span> <br /> From Pabna,
+            Bangladesh 📌
           </p>
           <div className="w-fit text-lg flex mt-6 gap-3 mx-auto md:mx-0">
             <Link
