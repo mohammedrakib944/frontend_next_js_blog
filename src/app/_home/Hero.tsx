@@ -12,6 +12,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-6xl font-bold text-accent">
             Full-Stack Web Developer 👋🏼
           </h1>
+          {/* Intro section */}
           <p className="text-neutral mt-6">
             Hi, I'm Rakib. A Full-Stack Web Developer. Proficient in{" "}
             <span className="text-primary">JavaScript</span> and{" "}
