@@ -11,6 +11,7 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
+// MetaTags
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
   title: {
@@ -41,6 +42,7 @@ export const metadata: Metadata = {
     images: [siteMetadata.socialBanner],
   },
 };
+
 
 export default function RootLayout({
   children,
